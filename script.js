@@ -2,7 +2,9 @@
 function scrollToElement(elementSelector, instance = 0) {
   const elements = document.querySelectorAll(elementSelector);
   if (elements.length > instance) {
-    elements[instance].scrollIntoView({ behavior: 'smooth' });
+    const navHeight = document.querySelector('nav').offsetHeight; // Altura da barra de navegação
+    const offsetTop = elements[instance].getBoundingClientRect().top + window.scrollY - navHeight;
+    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
   }
 }
 
@@ -129,17 +131,13 @@ skillsShowLessBtn.addEventListener('click', function () {
   skillsShowLessBtn.style.display = 'none';
 });
 
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("btnBackToTop").style.display = "block";
-  } else {
-    document.getElementById("btnBackToTop").style.display = "none";
-  }
+function downloadCV() {
+  var fileName = "cv_felipe_babel.pdf";
+  var filePath = "doc/" + fileName;
+  var link = document.createElement("a");
+  link.href = filePath;
+  link.download = fileName;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
-
-document.getElementById("btnBackToTop").addEventListener("click", function() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-});

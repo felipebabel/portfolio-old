@@ -23,13 +23,16 @@ body {
 }
 
 nav {
-  max-width: 1200px;
-  margin: auto;
-  padding: 2rem 1rem;
+  position: sticky;
+  top: 0;
+  padding: 0 85px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  height: 80px;
+  background-color: #27272a;
+  z-index: 1000
 }
 
 .nav-logo {
@@ -90,21 +93,17 @@ nav {
   transition: all 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #1e40af;
+.linkEnglish a{
+  color: #fff;
 }
 
-.btn-back-to-top {
-  position: fixed;
-  bottom: 100px;
-  left: 100px;
-  padding: 1rem 1rem;
-  font-size: 1.25rem;
-  color: #fff;
-  background-color: #1d4ed8;
-  border-radius: 5px;
-  cursor: pointer;
-  /* Defina outros estilos conforme necessário */
+.linkEnglish a:hover{
+  color: rgb(255, 127, 38);
+}
+
+
+.btn:hover {
+  background-color: #1e40af;
 }
 
 .btnShow {
@@ -154,11 +153,6 @@ header .content h1 {
   font-size: 3rem;
   font-weight: 700;
   line-height: 4rem;
-}
-
-header .content h1 span {
-  /*TODO excluir n ta usando */
-  color: rgb(255, 127, 38);
 }
 
 header .content p {
@@ -325,6 +319,8 @@ section .header {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
+  justify-items: center;
+  align-items: center;
 }
 
 .experiences .card {
@@ -343,47 +339,9 @@ section .header {
   border-color: rgb(255, 127, 38);
 }
 
-.experiences .card .content {
-  flex: 1;
-  margin-bottom: 2rem;
-}
-
-.experiences .card h4 {
-  margin-bottom: 1rem;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-.experiences .card h3 {
-  color: #fff;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  font-weight: 600;
-  border-bottom: 2px dashed #fff;
-}
-
 .experiences .card p {
   color: #fff;
   margin-bottom: 0.75rem;
-}
-
-.experiences .card p i {
-  color: #ccc;
-  font-size: 1.2rem;
-  margin-right: 0.3rem;
-}
-
-.experiences .card button {
-  color: #fff;
-  background-color: transparent;
-  border: 2px solid #fff;
-}
-
-.experiences .card button:hover {
-  background-color: #1e40af;
-  border-color: #1e40af;
 }
 
 .flex-container {
@@ -487,14 +445,13 @@ footer .column p {
   margin-bottom: 2rem;
 }
 
-footer .column .socials {
+ .socials {
   display: flex;
   align-items: center;
-  position: static;
   gap: 1rem;
 }
 
-footer .column .socials a {
+ .socials a {
   color: #ccc;
   background-color: #1d4ed8;
   border-color: #1d4ed8;
@@ -504,10 +461,16 @@ footer .column .socials a {
   transition: all 0.3s ease;
 }
 
-footer .column .socials a:hover {
+.socials a:hover {
   color: #fff;
+  background-color: #1e40af;
+  border-color: #1e40af;
   font-size: 1.25rem;
   transition: all 0.3s ease;
+}
+
+.socials a:hover:not(:last-child) {
+  font-size: 1rem; /* Define o tamanho da fonte padrão para todos os ícones, exceto o último */
 }
 
 footer .column h4 {
