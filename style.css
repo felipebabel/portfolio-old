@@ -84,12 +84,6 @@ nav{
     padding: 5rem 2rem;
 }
 
-.blur{
-    position: absolute;
-    box-shadow: 0 0 1000px 50px #1d4ed8;
-    z-index: -100;
-}
-
 header{
     position: relative;
     padding-top: 2rem;
@@ -115,8 +109,7 @@ header .content h1{
 }
 
 header .content h1 span{
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #fff;
+  color: rgb(255, 75, 23);
 }
 
 header .content p{
@@ -155,14 +148,14 @@ section .header{
     font-weight: 600;
 }
 
-.features{
+.portfolio{
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
-.features .card{
+.portfolio .card{
     background-color: #27272a;
     padding: 1rem;
     border: 2px solid transparent;
@@ -170,12 +163,12 @@ section .header{
     transition: all 0.3s ease;
 }
 
-.features .card:hover{
+.portfolio .card:hover{
     background-color: #323232;
     border-color: #fff;
 }
 
-.features .card span{
+.portfolio .card span{
     display: inline-block;
     background-color: #1e40af;
     padding: 2px 9px;
@@ -185,24 +178,24 @@ section .header{
     border-radius: 5px;
 }
 
-.features .card h4{
+.portfolio .card h4{
     margin-bottom: 0.5rem;
     color: #fff;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-.features .card p{
+.portfolio .card p{
     color: #ccc;
     margin-bottom: 1rem;
 }
 
-.features .card a{
+.portfolio .card a{
     color: #fff;
     transition: all 0.3s ease;
 }
 
-.features .card a:hover{
+.portfolio .card a:hover{
     color: #1e40af;
 }
 
@@ -353,7 +346,7 @@ footer .column > a:hover{
     header .image{
         grid-area: 1/1/2/2;
     }
-    .features{
+    .portfolio{
         grid-template-columns: repeat(2, 1fr);
     }
     .pricing{
@@ -369,7 +362,7 @@ footer .column > a:hover{
         display: none;
     }
 
-    .features{
+    .portfolio{
         grid-template-columns: repeat(1, 1fr);
     }
 
