@@ -36,6 +36,10 @@ nav{
     max-width: 100px;
 }
 
+.nav-logo-home{
+  max-width: 100px;
+}
+
 .nav-logo-philips{
   max-width: 100px;
   margin-right: 20px;
@@ -46,6 +50,13 @@ nav{
     display: flex;
     align-items: center;
     gap: 3rem;
+}
+
+.nav-links-home{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
 .link a{
@@ -61,12 +72,12 @@ nav{
     width: 0;
     bottom: 0;
     left: 0;
-    background-color: #1d4ed8;
+    background-color: rgb(255, 127, 38);
     transition: all 0.3s ease;
 }
 
 .link a:hover::after{
-    width: 70%;
+    width: 100%;
 }
 
 .btn{
@@ -113,7 +124,7 @@ header .content h1{
     line-height: 4rem;
 }
 
-header .content h1 span{
+header .content h1 span{ /*TODO excluir n ta usando */
   color: rgb(255, 127, 38);
 }
 
@@ -170,7 +181,7 @@ section .header{
 
 .skills .card:hover{
     background-color: #323232;
-    border-color: #fff;
+    border-color: rgb(255, 127, 38);
 }
 
 .skills .card span{
@@ -230,7 +241,7 @@ section .header{
 
 .portfolio .card:hover{
     background-color: #323232;
-    border-color: #fff;
+    border-color: rgb(255, 127, 38);
 }
 
 .portfolio .card .content{
@@ -296,7 +307,7 @@ section .header{
 
   .experiences .card:hover{
     background-color: #323232;
-    border-color: #fff;
+    border-color: rgb(255, 127, 38);
   }
 
   .experiences .card .content{
@@ -360,6 +371,73 @@ section .header{
   flex: 1; 
 }
 
+
+.aboutme{
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.aboutme .card{
+  padding: 2rem 2rem 2rem;
+  background-color: #27272a;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+.aboutme .card:hover{
+  background-color: #323232;
+  border-color: rgb(255, 127, 38);
+}
+
+.aboutme .card .content{
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.aboutme .card h4{
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.aboutme .card h3{
+  color: #fff;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 2px dashed #fff;
+}
+
+.aboutme .card p{
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.aboutme .card p i{
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-right: 0.3rem;
+}
+
+.aboutme .card button{
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+.aboutme .card button:hover{
+  background-color: #1e40af;
+  border-color: #1e40af;
+}
+
 footer{
     position: relative;
     display: grid;
@@ -380,6 +458,7 @@ footer .column p{
 footer .column .socials{
     display: flex;
     align-items: center;
+    position: static;
     gap: 1rem;
 }
 
@@ -388,13 +467,15 @@ footer .column .socials a{
     background-color: #1d4ed8;
     border-color: #1d4ed8;
     padding: 5px 10px;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     border-radius: 100%;
     transition: all 0.3s ease;
 }
 
 footer .column .socials a:hover{
     color: #fff;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
 }
 
 footer .column h4{
@@ -427,6 +508,9 @@ footer .column > a:hover{
 @media (width < 900px){
     .nav-links{
         display: none;
+    }
+    .nav-logo-home{
+      display: none;
     }
     header{
         grid-template-columns: repeat(1, 1fr);
