@@ -1,385 +1,301 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    outline: none;
-    border: none;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
 }
 
-img{
-    width: 100%;
-    display: flex;
+img {
+  width: 100%;
+  display: flex;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #18181B;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #18181B;
 }
 
-nav{
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-.nav-logo{
-    max-width: 100px;
-}
-
-.nav-logo-home{
+.nav-logo {
   max-width: 100px;
 }
 
-.nav-logo-philips{
+.nav-logo-home {
+  max-width: 100px;
+}
+
+.nav-logo-philips {
   max-width: 100px;
   margin-right: 20px;
 }
 
-.nav-links{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-}
-
-.nav-links-home{
+.nav-links {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 3rem;
 }
 
-.link a{
-    position: relative;
-    padding-bottom: 0.75rem;
-    color: #fff;
+.nav-links-home {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
-.link a::after{
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(255, 127, 38);
-    transition: all 0.3s ease;
+.link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: #fff;
 }
 
-.link a:hover::after{
-    width: 100%;
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255, 127, 38);
+  transition: all 0.3s ease;
 }
 
-.btn{
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #1d4ed8;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.link a:hover::after {
+  width: 100%;
 }
 
-.btn:hover{
-    background-color: #1e40af;
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #1d4ed8;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.container{
-    max-width: 1200px;
-    margin: auto;
-    padding: 5rem 2rem;
+.btn:hover {
+  background-color: #1e40af;
 }
 
-header{
-    position: relative;
-    padding-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2rem;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 2rem;
 }
 
-header .content h4{
-    margin-bottom: 1rem;
-    color: #ccc;
-    font-size: 1rem;
-    font-weight: 600;
+header {
+  position: relative;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
 }
 
-header .content h1{
-    color: #fff;
-    margin-bottom: 1rem;
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 4rem;
+header .content h4 {
+  margin-bottom: 1rem;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-header .content h1 span{ /*TODO excluir n ta usando */
+header .content h1 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+}
+
+header .content h1 span {
+  /*TODO excluir n ta usando */
   color: rgb(255, 127, 38);
 }
 
-header .content p{
-    margin-bottom: 2rem;
-    color: #ccc;
+header .content p {
+  margin-bottom: 2rem;
+  color: #ccc;
 }
 
-header .image{
-    position: relative;
+header .image {
+  position: relative;
 }
 
-header .image::before{
-    content: "o";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 38rem;
-    font-weight: 400;
-    line-height: 20rem;
-    color: #1d4ed8;
-    opacity: 0.2;
-    z-index: -100;
+header .image::before {
+  content: "o";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 38rem;
+  font-weight: 400;
+  line-height: 20rem;
+  color: #1d4ed8;
+  opacity: 0.2;
+  z-index: -100;
 }
 
-header .image img{
-    max-width: 600px;
-    margin: auto;
+header .image img {
+  max-width: 600px;
+  margin: auto;
 }
 
-section .header{
-    margin-bottom: 1rem;
-    color: #fff;
-    text-align: center;
-    font-size: 2.25rem;
-    font-weight: 600;
+section .header {
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 600;
 }
 
-.skills{
-    margin-top: 4rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+.skills {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
 }
 
-.skills .card{
-    background-color: #27272a;
-    padding: 1rem;
-    border: 2px solid transparent;
-    border-radius: 15px;
-    transition: all 0.3s ease;
+.skills .card {
+  background-color: #27272a;
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
 }
 
-.skills .card:hover{
-    background-color: #323232;
-    border-color: rgb(255, 127, 38);
+.skills .card:hover {
+  background-color: #323232;
+  border-color: rgb(255, 127, 38);
 }
 
-.skills .card span{
-    display: inline-block;
-    background-color: #1e40af;
-    padding: 2px 9px;
-    margin-bottom: 1rem;
-    font-size: 1.75rem;
-    color: #fff;
-    border-radius: 5px;
+.skills .card span {
+  display: inline-block;
+  background-color: #1e40af;
+  padding: 2px 9px;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: #fff;
+  border-radius: 5px;
 }
 
-.skills .card h4{
-    margin-bottom: 0.5rem;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 600;
+.skills .card h4 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-.skills .card p{
-    color: #ccc;
-    margin-bottom: 1rem;
+.skills .card p {
+  color: #ccc;
+  margin-bottom: 1rem;
 }
 
-.skills .card a{
-    color: #fff;
-    transition: all 0.3s ease;
+.skills .card a {
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
-.skills .card a:hover{
-    color: #1e40af;
+.skills .card a:hover {
+  color: #1e40af;
 }
 
-.sub-header{
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
-    color: #ccc;
+.sub-header {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  color: #ccc;
 }
 
-.portfolio{
-    margin-top: 4rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+.portfolio {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
-.portfolio .card{
-    padding: 3rem 2rem;
-    background-color: #27272a;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid transparent;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-}
-
-.portfolio .card:hover{
-    background-color: #323232;
-    border-color: rgb(255, 127, 38);
-}
-
-.portfolio .card .content{
-    flex: 1;
-    margin-bottom: 2rem;
-}
-
-.portfolio .card h4{
-    margin-bottom: 1rem;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.portfolio .card h3{
-    color: #fff;
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    font-weight: 600;
-    border-bottom: 2px dashed #fff;
-}
-
-.portfolio .card p{
-    color: #fff;
-    margin-bottom: 0.75rem;
-}
-
-.portfolio .card p i{
-    color: #ccc;
-    font-size: 1.2rem;
-    margin-right: 0.3rem;
-}
-
-.portfolio .card button{
-    color: #fff;
-    background-color: transparent;
-    border: 2px solid #fff;
-}
-
-.portfolio .card button:hover{
-    background-color: #1e40af;
-    border-color: #1e40af;
-}
-
-  .experiences{
-    margin-top: 4rem;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-  }
-
-  .experiences .card{
-    padding: 2rem 2rem 2rem;
-    background-color: #27272a;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid transparent;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    align-items: center;
-  }
-
-  .experiences .card:hover{
-    background-color: #323232;
-    border-color: rgb(255, 127, 38);
-  }
-
-  .experiences .card .content{
-    flex: 1;
-    margin-bottom: 2rem;
-  }
-
-  .experiences .card h4{
-    margin-bottom: 1rem;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
-
-  .experiences .card h3{
-    color: #fff;
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    font-weight: 600;
-    border-bottom: 2px dashed #fff;
-  }
-
-  .experiences .card p{
-    color: #fff;
-    margin-bottom: 0.75rem;
-  }
-
-  .experiences .card p i{
-    color: #ccc;
-    font-size: 1.2rem;
-    margin-right: 0.3rem;
-  }
-
-  .experiences .card button{
-    color: #fff;
-    background-color: transparent;
-    border: 2px solid #fff;
-  }
-
-  .experiences .card button:hover{
-    background-color: #1e40af;
-    border-color: #1e40af;
-  }
-
-.flex-container {
+.portfolio .card {
+  padding: 3rem 2rem;
+  background-color: #27272a;
   display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
 }
 
-.nav-logo-philips {
-  flex: 0 0 auto; 
-  margin-right: 50px; 
+.portfolio .card:hover {
+  background-color: #323232;
+  border-color: rgb(255, 127, 38);
 }
 
-.nav-logo-philips img {
-  max-width: 100%;
-  height: auto;
+.portfolio .card .content {
+  flex: 1;
+  margin-bottom: 2rem;
 }
 
-.text {
-  flex: 1; 
+.portfolio .card h4 {
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
+.portfolio .card h3 {
+  color: #fff;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 2px dashed #fff;
+}
 
-.aboutme{
+.portfolio .card p {
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.portfolio .card p i {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-right: 0.3rem;
+}
+
+.portfolio .card button {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+.portfolio .card button:hover {
+  background-color: #1e40af;
+  border-color: #1e40af;
+}
+
+.experiences {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
 }
 
-.aboutme .card{
+.experiences .card {
   padding: 2rem 2rem 2rem;
   background-color: #27272a;
   display: flex;
@@ -390,24 +306,24 @@ section .header{
   align-items: center;
 }
 
-.aboutme .card:hover{
+.experiences .card:hover {
   background-color: #323232;
   border-color: rgb(255, 127, 38);
 }
 
-.aboutme .card .content{
+.experiences .card .content {
   flex: 1;
   margin-bottom: 2rem;
 }
 
-.aboutme .card h4{
+.experiences .card h4 {
   margin-bottom: 1rem;
   color: #fff;
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-.aboutme .card h3{
+.experiences .card h3 {
   color: #fff;
   padding-bottom: 1rem;
   margin-bottom: 2rem;
@@ -416,133 +332,224 @@ section .header{
   border-bottom: 2px dashed #fff;
 }
 
-.aboutme .card p{
+.experiences .card p {
   color: #fff;
   margin-bottom: 0.75rem;
 }
 
-.aboutme .card p i{
+.experiences .card p i {
   color: #ccc;
   font-size: 1.2rem;
   margin-right: 0.3rem;
 }
 
-.aboutme .card button{
+.experiences .card button {
   color: #fff;
   background-color: transparent;
   border: 2px solid #fff;
 }
 
-.aboutme .card button:hover{
+.experiences .card button:hover {
   background-color: #1e40af;
   border-color: #1e40af;
 }
 
-footer{
-    position: relative;
-    display: grid;
-    grid-template-columns: 400px repeat(3, 1fr);
-    gap: 2rem;
+.flex-container {
+  display: flex;
 }
 
-footer .column .logo{
-    max-width: 100px;
-    margin-bottom: 2rem;
+.nav-logo-philips {
+  flex: 0 0 auto;
+  margin-right: 50px;
 }
 
-footer .column p{
-    color: #ccc;
-    margin-bottom: 2rem;
+.nav-logo-philips img {
+  max-width: 100%;
+  height: auto;
 }
 
-footer .column .socials{
-    display: flex;
-    align-items: center;
-    position: static;
-    gap: 1rem;
+.text {
+  flex: 1;
 }
 
-footer .column .socials a{
-    color: #ccc;
-    background-color: #1d4ed8;
-    border-color: #1d4ed8;
-    padding: 5px 10px;
-    font-size: 1.5rem;
-    border-radius: 100%;
-    transition: all 0.3s ease;
+
+.aboutme {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
 }
 
-footer .column .socials a:hover{
-    color: #fff;
-    font-size: 1.25rem;
-    transition: all 0.3s ease;
+.aboutme .card {
+  padding: 2rem 2rem 2rem;
+  background-color: #27272a;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  align-items: center;
 }
 
-footer .column h4{
-    color: #fff;
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-    font-weight: 500;
+.aboutme .card:hover {
+  background-color: #323232;
+  border-color: rgb(255, 127, 38);
 }
 
-footer .column > a{
-    display: block;
-    color: #ccc;
-    margin-bottom: 1rem;
-    transition: all 0.3s ease;
+.aboutme .card .content {
+  flex: 1;
+  margin-bottom: 2rem;
 }
 
-footer .column > a:hover{
-    color: #1d4ed8;
+.aboutme .card h4 {
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
-.copyright{
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem;
-    color: #fff;
-    font-size: 0.8rem;
-    text-align: center;
+.aboutme .card h3 {
+  color: #fff;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 2px dashed #fff;
 }
 
-@media (width < 900px){
-    .nav-links{
-        display: none;
-    }
-    .nav-logo-home{
-      display: none;
-    }
-    header{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    header .image{
-        grid-area: 1/1/2/2;
-    }
-    .skills{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .portfolio{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    footer{
-        grid-template-columns: 1fr 200px;
-    }
+.aboutme .card p {
+  color: #fff;
+  margin-bottom: 0.75rem;
 }
 
-@media (width < 600px){
-    header .image::before{
-        display: none;
-    }
+.aboutme .card p i {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-right: 0.3rem;
+}
 
-    .skills{
-        grid-template-columns: repeat(1, 1fr);
-    }
+.aboutme .card button {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
 
-    .portfolio{
-        grid-template-columns: repeat(1, 1fr);
-    }
+.aboutme .card button:hover {
+  background-color: #1e40af;
+  border-color: #1e40af;
+}
 
-    footer{
-        grid-template-columns: 1fr 150px;
-    }
+footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 400px repeat(3, 1fr);
+  gap: 2rem;
+}
+
+footer .column .logo {
+  max-width: 100px;
+  margin-bottom: 2rem;
+}
+
+footer .column p {
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+footer .column .socials {
+  display: flex;
+  align-items: center;
+  position: static;
+  gap: 1rem;
+}
+
+footer .column .socials a {
+  color: #ccc;
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover {
+  color: #fff;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+footer .column h4 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+footer .column>a {
+  display: block;
+  color: #ccc;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+footer .column>a:hover {
+  color: #1d4ed8;
+}
+
+.copyright {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media (width < 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-logo-home {
+    display: none;
+  }
+
+  header {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  header .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer {
+    grid-template-columns: 1fr 200px;
+  }
+}
+
+@media (width < 600px) {
+  header .image::before {
+    display: none;
+  }
+
+  .skills {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .portfolio {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  footer {
+    grid-template-columns: 1fr 150px;
+  }
 }
