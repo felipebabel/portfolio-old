@@ -94,6 +94,38 @@ nav {
   background-color: #1e40af;
 }
 
+.btn-back-to-top {
+  position: fixed;
+  bottom: 100px;
+  left: 100px;
+  padding: 1rem 1rem;
+  font-size: 1.25rem;
+  color: #fff;
+  background-color: #1d4ed8;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Defina outros estilos conforme necessário */
+}
+
+.btnShow {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #1d4ed8;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.btnShow:hover {
+  background-color: #1e40af;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -371,7 +403,6 @@ section .header {
 .text {
   flex: 1;
 }
-
 
 .aboutme {
   margin-top: 4rem;

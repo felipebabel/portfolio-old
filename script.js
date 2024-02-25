@@ -34,88 +34,112 @@ link5.addEventListener('click', () => {
   scrollToElement('.header', 3);
 });
 
-// Controle dos botões "Show More" e "Show Less" para os cards
-const cards = document.querySelectorAll('.portfolio .card');
-const showMoreBtn = document.getElementById('showMoreBtn');
-const showLessBtn = document.getElementById('showLess');
-const initialVisibleCards = 6;
-let visibleCards = initialVisibleCards;
+//_________________________________PORTFOLIO__________________________________
 
-// Mostra os primeiros 'initialVisibleCards' cards e esconde o resto
-for (let i = initialVisibleCards; i < cards.length; i++) {
-  cards[i].style.display = 'none';
+// Controle dos botões "Show More" e "Show Less" para os cards do portfólio
+const portfolioCards = document.querySelectorAll('.portfolio .card');
+const portfolioShowMoreBtn = document.getElementById('portfolioShowMoreBtn');
+const portfolioShowLessBtn = document.getElementById('portfolioShowLessBtn');
+const initialVisiblePortfolioCards = 6;
+let visiblePortfolioCards = initialVisiblePortfolioCards;
+
+// Mostra os primeiros 'initialVisiblePortfolioCards' cards e esconde o resto
+for (let i = initialVisiblePortfolioCards; i < portfolioCards.length; i++) {
+  portfolioCards[i].style.display = 'none';
 }
 
-// Mostra o botão 'Show More' se houver mais cards do que os inicialmente visíveis
-if (cards.length > initialVisibleCards) {
-  showMoreBtn.style.display = 'block';
+// Mostra o botão 'Show More' se houver mais de 6 cards do portfólio
+if (portfolioCards.length > initialVisiblePortfolioCards) {
+  portfolioShowMoreBtn.style.display = 'block';
 }
 
-// Mostra mais cards quando o botão 'Show More' é clicado
-showMoreBtn.addEventListener('click', function () {
-  for (let i = visibleCards; i < visibleCards + 3; i++) {
-    if (cards[i]) {
-      cards[i].style.display = 'block';
+// Mostra mais cards do portfólio quando o botão 'Show More' é clicado
+portfolioShowMoreBtn.addEventListener('click', function () {
+  for (let i = visiblePortfolioCards; i < visiblePortfolioCards + 3; i++) {
+    if (portfolioCards[i]) {
+      portfolioCards[i].style.display = 'block';
     }
   }
-  visibleCards += 3;
+  visiblePortfolioCards += 3;
 
-  // Se não houver mais cards para mostrar, esconde o botão 'Show More'
-  if (visibleCards >= cards.length) {
-    showLessBtn.style.display = 'block';
-
-    showMoreBtn.style.display = 'none';
+  // Se o número de cards visíveis for igual ou maior que o total, mostra o botão 'Show Less'
+  if (visiblePortfolioCards >= portfolioCards.length) {
+    portfolioShowLessBtn.style.display = 'block';
+    portfolioShowMoreBtn.style.display = 'none';
   }
 });
 
-// Esconde cards extras quando o botão 'Show Less' é clicado
-showLessBtn.addEventListener('click', function () {
-  for (let i = visibleCards - 1; i >= initialVisibleCards; i--) {
-    cards[i].style.display = 'none';
+// Esconde cards extras do portfólio quando o botão 'Show Less' é clicado
+portfolioShowLessBtn.addEventListener('click', function () {
+  for (let i = initialVisiblePortfolioCards; i < portfolioCards.length; i++) {
+    portfolioCards[i].style.display = 'none';
   }
-  visibleCards = initialVisibleCards;
-  showMoreBtn.style.display = 'block';
-  showLessBtn.style.display = 'none';
+  visiblePortfolioCards = initialVisiblePortfolioCards;
+
+  // Esconde o botão 'Show Less' e mostra o botão 'Show More'
+  portfolioShowMoreBtn.style.display = 'block';
+  portfolioShowLessBtn.style.display = 'none';
 });
 
+
+//_________________________________SKILLS__________________________________
+
+// Controle dos botões "Show More" e "Show Less" para os cards de habilidades (skills)
 const skillsCards = document.querySelectorAll('.skills .card');
-const showMoreSkillsBtn = document.getElementById('showMoreSkills');
-const showLessSkillsBtn = document.getElementById('showLessSkills');
-const initialVisibleSkills = 8; // Alterado para 8
-let visibleSkills = initialVisibleSkills;
+const skillsShowMoreBtn = document.getElementById('skillsShowMoreBtn');
+const skillsShowLessBtn = document.getElementById('skillsShowLessBtn');
+const initialVisibleSkillsCards = 8;
+let visibleSkillsCards = initialVisibleSkillsCards;
 
-// Mostra os primeiros 'initialVisibleSkills' cards e esconde o resto
-for (let i = initialVisibleSkills; i < skillsCards.length; i++) {
+// Mostra os primeiros 'initialVisibleSkillsCards' cards e esconde o resto
+for (let i = initialVisibleSkillsCards; i < skillsCards.length; i++) {
   skillsCards[i].style.display = 'none';
 }
 
-// Mostra o botão 'Show More' se houver mais habilidades do que as inicialmente visíveis
-if (skillsCards.length > initialVisibleSkills) {
-  showMoreSkillsBtn.style.display = 'block';
+// Mostra o botão 'Show More' se houver mais de 8 cards de habilidades
+if (skillsCards.length > initialVisibleSkillsCards) {
+  skillsShowMoreBtn.style.display = 'block';
 }
 
-// Mostra mais habilidades quando o botão 'Show More' é clicado
-showMoreSkillsBtn.addEventListener('click', function () {
-  for (let i = visibleSkills; i < visibleSkills + 3; i++) {
+// Mostra mais cards de habilidades quando o botão 'Show More' é clicado
+skillsShowMoreBtn.addEventListener('click', function () {
+  for (let i = visibleSkillsCards; i < visibleSkillsCards + 4; i++) {
     if (skillsCards[i]) {
       skillsCards[i].style.display = 'block';
     }
   }
-  visibleSkills += 3;
+  visibleSkillsCards += 4;
 
-  // Se não houver mais habilidades para mostrar, esconde o botão 'Show More'
-  if (visibleSkills >= skillsCards.length) {
-    showLessSkillsBtn.style.display = 'block';
-    showMoreSkillsBtn.style.display = 'none';
+  // Se o número de cards visíveis for igual ou maior que o total, mostra o botão 'Show Less'
+  if (visibleSkillsCards >= skillsCards.length) {
+    skillsShowLessBtn.style.display = 'block';
+    skillsShowMoreBtn.style.display = 'none';
   }
 });
 
-// Esconde habilidades extras quando o botão 'Show Less' é clicado
-showLessSkillsBtn.addEventListener('click', function () {
-  for (let i = visibleSkills - 1; i >= initialVisibleSkills; i--) {
+// Esconde cards extras de habilidades quando o botão 'Show Less' é clicado
+skillsShowLessBtn.addEventListener('click', function () {
+  for (let i = initialVisibleSkillsCards; i < skillsCards.length; i++) {
     skillsCards[i].style.display = 'none';
   }
-  visibleSkills = initialVisibleSkills;
-  showMoreSkillsBtn.style.display = 'block';
-  showLessSkillsBtn.style.display = 'none';
+  visibleSkillsCards = initialVisibleSkillsCards;
+
+  // Esconde o botão 'Show Less' e mostra o botão 'Show More'
+  skillsShowMoreBtn.style.display = 'block';
+  skillsShowLessBtn.style.display = 'none';
+});
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("btnBackToTop").style.display = "block";
+  } else {
+    document.getElementById("btnBackToTop").style.display = "none";
+  }
+}
+
+document.getElementById("btnBackToTop").addEventListener("click", function() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 });
