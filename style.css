@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -97,11 +97,11 @@ nav {
   transition: all 0.3s ease;
 }
 
-.linkEnglish a{
+.linkEnglish a {
   color: #fff;
 }
 
-.linkEnglish a:hover{
+.linkEnglish a:hover {
   color: rgb(255, 127, 38);
 }
 
@@ -131,8 +131,8 @@ nav {
 
 .container {
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 5rem 2rem;
+  margin: auto;
+  padding: 5rem 1rem;
 }
 
 header {
@@ -151,8 +151,11 @@ header .content h4 {
   font-weight: 600;
 }
 
+.ri-menu-line {
+  color: transparent;
+}
+
 header .content h1 {
-  color: #fff;
   margin-bottom: 1rem;
   font-size: 3rem;
   font-weight: 700;
@@ -200,6 +203,14 @@ section .header {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+}
+
+.name{
+  color: rgb(255, 127, 38);
+}
+
+.job{
+  color: #fff;
 }
 
 .skills .card {
@@ -449,13 +460,13 @@ footer .column p {
   margin-bottom: 2rem;
 }
 
- .socials {
+.socials {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
- .socials a {
+.socials a {
   color: #fff;
   background-color: #1d4ed8;
   padding: 5px 10px;

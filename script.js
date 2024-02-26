@@ -1,3 +1,8 @@
+function openMenu() {
+  const nav = document.querySelector('nav');
+  nav.classList.toggle('open');
+}
+
 //_________________________________PORTFOLIO__________________________________
 
 // Controle dos botões "Show More" e "Show Less" para os cards do portfólio
