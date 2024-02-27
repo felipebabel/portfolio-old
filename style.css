@@ -216,6 +216,7 @@ section .header {
 .skills .card {
   background-color: #27272a;
   padding: 1rem;
+  
   border: 2px solid transparent;
   border-radius: 15px;
   transition: all 0.3s ease;
@@ -394,6 +395,7 @@ section .header {
   transition: all 0.3s ease;
   align-items: center;
 }
+
 
 .aboutme .card:hover {
   background-color: #323232;
