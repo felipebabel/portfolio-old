@@ -205,18 +205,31 @@ section .header {
   gap: 2rem;
 }
 
-.name{
+.name {
   color: rgb(255, 127, 38);
 }
 
-.job{
+.skills H3 {
+  margin-top: 1rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: -30%;
+}
+
+.card i {
+  margin-top: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+.job {
   color: #fff;
 }
 
 .skills .card {
   background-color: #27272a;
   padding: 1rem;
-  
+  align-items: center;
   border: 2px solid transparent;
   border-radius: 15px;
   transition: all 0.3s ease;
@@ -401,6 +414,14 @@ section .header {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+.skills i {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  font-size: 5rem;
+  color: #fff;
 }
 
 .link-github a {
