@@ -54,8 +54,6 @@ portfolioShowLessBtn.addEventListener('click', function () {
 
 
 function openMenu() {
-  const nav = document.querySelector('nav');
-  nav.classList.toggle('open');
 }
 
 //_________________________________SKILLS__________________________________
