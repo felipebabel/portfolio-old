@@ -53,8 +53,56 @@ portfolioShowLessBtn.addEventListener('click', function () {
 //_________________________________MENU__________________________________
 
 
-function openMenu() {
-}
+document.addEventListener('DOMContentLoaded', function() {
+  var open = document.getElementById('menu-icon');
+  var navMenu = document.querySelector('.nav-links-home-menu');
+  var btnClose = document.getElementById('btn-close');
+  var menuLinks = navMenu.querySelectorAll('a');
+  var overlay = document.querySelector('.overlay');
+
+  function closeMenu() {
+      navMenu.classList.remove('show-menu');
+      overlay.classList.remove('show-overlay');
+  }
+
+  btnClose.addEventListener('click', function() {
+      closeMenu();
+  });
+
+  menuLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+          closeMenu();
+      });
+  });
+
+  open.addEventListener('click', function() {
+      navMenu.classList.toggle('show-menu');
+      overlay.classList.toggle('show-overlay');
+  });
+
+  overlay.addEventListener('click', function() {
+    closeMenu(); // Fecha o menu quando o overlay é clicado
+  });
+
+  function toggleMenu() {
+      if (window.innerWidth > 750) {
+          navMenu.classList.remove('show-menu');
+          overlay.classList.remove('show-overlay');
+      } 
+  }
+
+  document.addEventListener('keyup', function(event) {
+    if (event.key === "Escape") { // Fecha o menu se a tecla Esc for pressionada
+        closeMenu();
+    }
+});
+
+  window.addEventListener('resize', function() {
+      toggleMenu();
+  });
+
+  toggleMenu(); // Chama a função para definir o estado inicial do menu
+});
 
 //_________________________________SKILLS__________________________________
 

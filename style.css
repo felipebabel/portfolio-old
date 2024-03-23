@@ -438,12 +438,78 @@ section .header {
 #menu-icon {
   display: none;
   color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
   background-color: #27272a;
+  margin-left: auto;
+  margin-right: 5%;
 }
 
 .nav-links-home-menu {
   display: none;
-  color:#18181B
+  background-color:#18181B;
+  top: 0;
+  right: 0;
+  width: 70%;
+  text-align: center;
+  height: 100%;
+  position: fixed;
+  list-style: none;
+  z-index: 99999999;
+}
+
+.nav-links-home-menu.show-menu {
+  display: block;
+}
+
+#btn-close {
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  background-color:#18181B;
+  position: absolute;
+  top: 10px; /* Ajuste conforme necessário */
+  left: 10px; /* Ajuste conforme necessário */
+}
+
+#btn-close:hover {
+  color: rgb(255, 127, 38);
+}
+
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%; /* cobre a parte da tela que não é ocupada pelo menu */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* define uma cor de fundo preta com 50% de transparência */
+  z-index: 99999998; /* coloca o overlay abaixo do menu */
+}
+
+.overlay.show-overlay {
+  display: block;
+}
+
+.linkMenu:not(:first-child) {
+  margin-top: 5rem; /* Adiciona espaçamento superior para todos os itens, exceto o primeiro */
+}
+
+.linkMenu {
+  margin-bottom: 5rem;
+  white-space: nowrap; /* Impede que o texto quebre a linha */
+}
+
+.linkMenu a {
+  color: #fff;
+  text-align: left;
+}
+
+.linkMenu a:hover {
+  color: rgb(255, 127, 38);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 
@@ -523,6 +589,11 @@ section .header {
   #menu-icon{
     transition: .1s;
     display: block;
+  }
+
+  .nav-links-home-menu {
+    transition: .1s;
+    display: none;
   }
 }
 
