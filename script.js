@@ -50,6 +50,13 @@ portfolioShowLessBtn.addEventListener('click', function () {
   portfolioShowLessBtn.style.display = 'none';
 });
 
+//_________________________________MENU__________________________________
+
+
+function openMenu() {
+  const nav = document.querySelector('nav');
+  nav.classList.toggle('open');
+}
 
 //_________________________________SKILLS__________________________________
 

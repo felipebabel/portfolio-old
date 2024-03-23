@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Personal Portfolio Felipe Babel</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -27,7 +28,10 @@
       <li id="link4" class="link"><a href="#portfolio">Portfolio</a></li>
       <li id="link5" class="link"><a href="#experiences">Experiences</a></li>
     </ul>
-    <i class="ri-menu-line"></i>
+    <button id="menu-icon" onclick="openMenu()"> 
+      <i class="bx bx-menu"></i>
+    </button>
+    </div>
   </nav>
 
   <header class="container">
@@ -103,6 +107,8 @@
         <i class="devicon-java-plain"></i>
 
         <H3>Java</H3>
+        <div id="empty-space" style="height: 9rem;"></div>
+
       </div>
       <div class="card">
 
@@ -118,9 +124,15 @@
         <i class="devicon-spring-original"></i>
 
         <H3>Spring Cloud</H3>
+        <div id="empty-space" style="height: 9rem;"></div>
+
       </div>
       <div class="card">
+        <i class="devicon-spring-original"></i>
+
+      
         <H3>SQL SERVER</H3>
+        <div id="empty-space" style="height: 9rem;"></div>
 
       </div>
       <div class="card">
@@ -133,16 +145,38 @@
         <div id="empty-space" style="height: 9rem;"></div>
       </div>
       <div class="card">
+        <i class="devicon-spring-original"></i>
+
         <H3>Microservice</H3>
+        <div id="empty-space" style="height: 9rem;"></div>
+
       </div>
       <div class="card">
+        <i class="devicon-spring-original"></i>
+
+        <H3>Spring Boot</H3>
+        <div id="empty-space" style="height: 9rem;"></div>
+
       </div>
       <div class="card">
+        <i class="devicon-spring-original"></i>
+
+        <H3>Spring Boot</H3>
+        <div id="empty-space" style="height: 9rem;"></div>
+
       </div>
       <div class="card">
+        <i class="devicon-spring-original"></i>
+
+        <H3>Spring Boot</H3>
         <div id="empty-space" style="height: 9rem;"></div>
       </div>
       <div class="card">
+        <i class="devicon-spring-original"></i>
+
+        <H3>Spring Boot</H3>
+        <div id="empty-space" style="height: 9rem;"></div>
+
       </div>
     </div>
     <div id="skillsShowMoreBtn" style="display: none;">
@@ -163,7 +197,7 @@
     <div class="portfolio">
       <div class="card">
         <div class="content">
-          <img src="images/email-microsservice.png">
+          <img src="images/email-microservice.png">  
         </div>
         <div class="link-github">
           <a href="https://github.com/felipebabel/email-microservice" target="_blank"><i class="ri-github-line"></i></a>
@@ -171,7 +205,7 @@
       </div>
       <div class="card">
         <div class="content">
-          <img src="images/email-microsservice.png">
+          <img src="images/order-notification-microservice.png"> 
         </div>
         <div class="link-github">
           <a href="https://github.com/felipebabel/order-notification-microservice" target="_blank"><i
