@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
   <title>Personal Portfolio Felipe Babel</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
@@ -28,7 +29,7 @@
       <li id="link4" class="link"><a href="#portfolio">Portfolio</a></li>
       <li id="link5" class="link"><a href="#experiences">Experiences</a></li>
     </ul>
-    <button id="menu-icon" onclick="openMenu()"> 
+    <button id="menu-icon" class="btn-menu" onclick="openMenu()"> 
       <i class="bx bx-menu"></i>
     </button>
     
@@ -52,7 +53,8 @@
         <H1 class="name">Felipe Babel</H1>
 
         <H1 class="job">Back-End Software Developer</H1>
-        <p></p>
+        <div class="info-home">
+          <p></p>
         <p>
           Graduating in Information Systems
         </p>
@@ -64,6 +66,9 @@
             <a href="https://www.linkedin.com/in/felipebabel/" target="_blank">C1 Advanced English Level</a>
           </p>
         </div>
+        </div>
+        
+        
 
         <div class="column">
           <div id="empty-space" style="height: 1rem;"></div>
@@ -87,7 +92,7 @@
 
   <section class="container" id="aboutme">
     <div id="empty-space" style="height: 3rem;"></div>
-    <h2 class="header">ABOUT ME</h2>
+    <h2 class="headeraboutme">ABOUT ME</h2>
     <p class="sub-header"></p>
     <div class="aboutme">
       <div class="card">
@@ -111,7 +116,7 @@
 
   <section class="container" id="skills">
     <div id="empty-space" style="height: 3rem;"></div>
-    <h2 class="header">SKILLS</h2>
+    <h2 class="headerskills">SKILLS</h2>
     <div class="skills">
       <div class="card">
         <i class="devicon-java-plain"></i>
@@ -198,8 +203,8 @@
 
   <section class="container" id="portfolio">
     <div id="empty-space" style="height: 3rem;"></div>
-    <h2 class="header">PORTFOLIO</h2>
-    <p class="sub-header">
+    <h2 class="headerportfolio">PORTFOLIO</h2>
+    <p class="personal-projects">
       My personal projects at Github.
     </p>
     <div class="portfolio">
@@ -283,7 +288,7 @@
 
   <section class="container" id="experiences">
     <div id="empty-space" style="height: 3rem;"></div>
-    <h2 class="header">EXPERIENCES</h2>
+    <h2 class="headerexperiences">EXPERIENCES</h2>
     <p class="sub-header"></p>
     <div class="experiences">
       <div class="card">

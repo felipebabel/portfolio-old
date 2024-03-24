@@ -1,6 +1,6 @@
 function openMenu() {
   const nav = document.querySelector('nav');
-  nav.classList.toggle('open');
+  nav.classList.toggle('open');  
 }
 
 //_________________________________PORTFOLIO__________________________________
@@ -49,6 +49,46 @@ portfolioShowLessBtn.addEventListener('click', function () {
   portfolioShowMoreBtn.style.display = 'block';
   portfolioShowLessBtn.style.display = 'none';
 });
+
+//_________________________________OPEN__________________________________
+
+window.onload = function() {
+  window.scrollTo(0, 0);
+}
+//_________________________________ANIMATION__________________________________
+
+const sr = ScrollReveal ({distance :'40px', duration: 2500, reset: true});
+const sr20 = ScrollReveal ({distance :'10px', duration: 1500, reset: true});
+const sr80 = ScrollReveal ({distance :'80px', duration: 2500, reset: false});
+
+sr80.reveal('.nav-logo-home', {delay: 200, opacity: 0, origin: 'left'});
+sr80.reveal('.nav-links-home', {delay:200, origin:'right'});
+sr80.reveal('header .image', {delay: 200, opacity: 0});
+
+sr.reveal('.name', {delay:200, origin:'top'});
+sr20.reveal('.personal-projects', {delay:200, origin:'right'});
+sr.reveal('.job', {delay:200, origin:'right'});
+sr.reveal('.info-home', {delay:200, origin:'left'});
+sr20.reveal('.btn-menu', {delay:200, origin:'right'});
+sr.reveal('.copyright', {delay:200, origin:'left'});
+sr.reveal('.socials', {delay:200, origin:'right'});
+sr.reveal('.aboutme .card', {delay:200, origin:'right'});
+sr.reveal('.headeraboutme', {delay:200, origin:'left'});
+sr.reveal('.headerskills', {delay:200, origin:'right'});
+sr.reveal('.headerportfolio', {delay:200, origin:'left'});
+sr.reveal('.headerexperiences', {delay:200, origin:'right'});
+sr.reveal('.experiences .card:nth-child(odd)', { // Aplica a animação no primeiro card
+  delay: 200,
+  origin: 'left', // Animado da direita para o centro
+  easing: 'ease-in-out', // Define uma função de animação
+});
+
+sr.reveal('.experiences .card:nth-child(even)', { // Aplica a animação no segundo card
+  delay: 200,
+  origin: 'right', // Animado da esquerda para o centro
+});
+
+
 
 //_________________________________MENU__________________________________
 
@@ -161,3 +201,11 @@ function downloadCV() {
   link.click();
   document.body.removeChild(link);
 }
+
+/*
+TODO
+ANIMAÇÃO MENU FECHAR ABRIR
+ANIMAÇÃO CARDS SKILLS E PORTFOLIO
+ARRUMAR PHOTO PHILIPS MOBILE
+BUG ANIMAÇÃO FOTO PERFIL E MENU??
+*/

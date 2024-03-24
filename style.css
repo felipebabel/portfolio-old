@@ -46,7 +46,6 @@ nav {
  /* IMAGES */
 
 .nav-logo-home {
-  transition: opacity 1s ease; 
   max-width: 100px;
 }
 
@@ -181,13 +180,14 @@ header .image img {
   margin: auto;
 }
 
-section .header {
+.headeraboutme, .headerskills, .headerportfolio, .headerexperiences {
   margin-bottom: 1rem;
   color: #fff;
   text-align: center;
   font-size: 2.25rem;
   font-weight: 600;
 }
+
 
 .name {
   color: rgb(255, 127, 38);
@@ -256,7 +256,7 @@ section .header {
   color: #fff;
 }
 
-.sub-header {
+.personal-projects {
   max-width: 600px;
   margin: auto;
   text-align: center;
@@ -453,9 +453,10 @@ section .header {
   width: 70%;
   text-align: center;
   height: 100%;
-  position: fixed;
   list-style: none;
+  position: fixed;
   z-index: 99999999;
+  transition: all 0.4s ease-in-out;
 }
 
 .nav-links-home-menu.show-menu {
