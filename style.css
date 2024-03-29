@@ -47,6 +47,7 @@ nav {
 
 .nav-logo-home {
   max-width: 100px;
+  cursor: pointer;
 }
 
 .nav-logo-philips {
@@ -173,6 +174,7 @@ header .content p {
 
 header .image {
   position: relative;
+  align-items: center;
 }
 
 header .image img {
@@ -456,7 +458,6 @@ header .image img {
   list-style: none;
   position: fixed;
   z-index: 99999999;
-  transition: all 0.4s ease-in-out;
 }
 
 .nav-links-home-menu.show-menu {
@@ -521,28 +522,23 @@ header .image img {
   }
 
   header .image img {
-    transition: .1s;
     max-width: 500px;
   }
 
   header .image {
-    transition: .1s;
     grid-area: 1/1/2/2;
   }
 
   .home {
-    transition: .1s;
     text-align: center;
   }
 
   .socials {
-    transition: .1s;
     align-items: center;
     justify-content: center;
   }
 
   header {
-    transition: .1s;
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -550,50 +546,41 @@ header .image img {
 
 @media (width < 900px) {
   header {
-    transition: .1s;
     grid-template-columns: repeat(1, 1fr);
   }
 
   header .image img {
-    transition: .1s;
     max-width: 400px;
   }
 
   .link {
-    transition: .1s;
     position: relative;
     padding-bottom: 0.75rem;
   }
 
   .skills {
-    transition: .1s;
     grid-template-columns: repeat(2, 1fr);
   }
 
   .portfolio {
-    transition: .1s;
     grid-template-columns: repeat(2, 1fr);
   }
 
   footer {
-    transition: .1s;
     grid-template-columns: 1fr 200px;
   }
 }
 
 @media (width < 750px) {
   .link {
-    transition: .1s;
     display: none;
   }
 
   #menu-icon{
-    transition: .1s;
     display: block;
   }
 
   .nav-links-home-menu {
-    transition: .1s;
     display: none;
   }
 }
@@ -605,13 +592,23 @@ header .image img {
     max-width: 300px;
   }
 
-  .nav-logo-philips {
-    display: none;
+  .portfolio .card {
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
-  .skills {
-    transition: .1s;
-    grid-template-columns: repeat(1, 1fr);
+  .aboutme .card {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .experiences .card {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .nav-logo-philips {
+    display: none;
   }
 
   .portfolio {

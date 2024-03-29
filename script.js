@@ -63,13 +63,14 @@ const sr80 = ScrollReveal ({distance :'80px', duration: 2500, reset: false});
 
 sr80.reveal('.nav-logo-home', {delay: 200, opacity: 0, origin: 'left'});
 sr80.reveal('.nav-links-home', {delay:200, origin:'right'});
-sr80.reveal('header .image', {delay: 200, opacity: 0});
+sr80.reveal('header .image', {delay: 200, origin: 'bottom'});
+sr80.reveal('.btn-menu', {delay:200, origin:'right'});
+
 
 sr.reveal('.name', {delay:200, origin:'top'});
 sr20.reveal('.personal-projects', {delay:200, origin:'right'});
 sr.reveal('.job', {delay:200, origin:'right'});
 sr.reveal('.info-home', {delay:200, origin:'left'});
-sr20.reveal('.btn-menu', {delay:200, origin:'right'});
 sr.reveal('.copyright', {delay:200, origin:'left'});
 sr.reveal('.socials', {delay:200, origin:'right'});
 sr.reveal('.aboutme .card', {delay:200, origin:'right'});
@@ -206,6 +207,5 @@ function downloadCV() {
 TODO
 ANIMAÇÃO MENU FECHAR ABRIR
 ANIMAÇÃO CARDS SKILLS E PORTFOLIO
-ARRUMAR PHOTO PHILIPS MOBILE
-BUG ANIMAÇÃO FOTO PERFIL E MENU??
+portfolio diminuir tamanho pro mobile
 */
