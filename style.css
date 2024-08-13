@@ -436,6 +436,7 @@ header .image img {
   max-width: 1200px;
   margin: auto;
   padding: 1rem;
+  padding-bottom: 30px;
   color: #fff;
   font-size: 0.8rem;
   text-align: center;
