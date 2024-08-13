@@ -398,6 +398,7 @@ header .image img {
 .experiences .card p {
   color: #fff;
   margin-bottom: 0.75rem;
+  text-align: justify;
 }
 
  /* ABOUT ME */
@@ -428,6 +429,7 @@ header .image img {
 .aboutme .card p {
   color: #fff;
   margin-bottom: 0.75rem;
+  text-align: justify;
 }
 
  /* COPYRIGHT */

@@ -203,6 +203,11 @@ function downloadCV() {
   document.body.removeChild(link);
 }
 
+//Copyright year
+const currentYear = new Date().getFullYear();
+
+document.getElementById('year').textContent = currentYear;
+
 
 /*
 TODO
