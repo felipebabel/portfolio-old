@@ -33,7 +33,7 @@ body {
 }
 
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   padding: 0 8%;
   width: 100%;
@@ -441,6 +441,10 @@ header .image img {
   text-align: center;
 }
 
+.home {
+  padding-top: 100px;
+}
+
  /* MOBILE */
 
 #menu-icon {
@@ -491,7 +495,7 @@ header .image img {
   top: 0;
   left: 0;
   width: 30%; /* cobre a parte da tela que não é ocupada pelo menu */
-  height: 100%;
+  height: 99999998;
   background-color: rgba(0, 0, 0, 0.5); /* define uma cor de fundo preta com 50% de transparência */
   z-index: 99999998; /* coloca o overlay abaixo do menu */
 }
@@ -529,6 +533,7 @@ header .image img {
 
   header .image img {
     max-width: 500px;
+    padding-top: 100px;
   }
 
   header .image {
@@ -537,6 +542,7 @@ header .image img {
 
   .home {
     text-align: center;
+    padding-top: 0px;
   }
 
   .socials {
@@ -620,10 +626,5 @@ header .image img {
   .portfolio {
     transition: .1s;
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  footer {
-    transition: .1s;
-    grid-template-columns: 1fr 150px;
   }
 }

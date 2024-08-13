@@ -203,6 +203,7 @@ function downloadCV() {
   document.body.removeChild(link);
 }
 
+
 /*
 TODO
 ANIMAÇÃO MENU FECHAR ABRIR
