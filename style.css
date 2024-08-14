@@ -30,6 +30,9 @@ body, html {
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #18181B;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Animação de transição */
 }
 
 nav {
@@ -401,6 +404,10 @@ header .image img {
   text-align: justify;
 }
 
+.justify {
+  text-align: justify;
+}
+
  /* ABOUT ME */
 
 .aboutme {
@@ -508,11 +515,11 @@ header .image img {
 }
 
 .linkMenu:not(:first-child) {
-  margin-top: 5rem; /* Adiciona espaçamento superior para todos os itens, exceto o primeiro */
+  margin-top: 6rem; /* Adiciona espaçamento superior para todos os itens, exceto o primeiro */
 }
 
 .linkMenu {
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
   white-space: nowrap; /* Impede que o texto quebre a linha */
 }
 
@@ -536,7 +543,7 @@ header .image img {
 
   header .image img {
     max-width: 500px;
-    padding-top: 100px;
+    padding-top: 60px;
   }
 
   header .image {
@@ -602,24 +609,23 @@ header .image img {
 
 @media (width < 600px) {
 
-  
   header .image img {
     max-width: 300px;
   }
 
   .portfolio .card {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .aboutme .card {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .experiences .card {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .nav-logo-philips {

@@ -205,13 +205,10 @@ function downloadCV() {
 
 //Copyright year
 const currentYear = new Date().getFullYear();
-
 document.getElementById('year').textContent = currentYear;
 
-
-/*
-TODO
-ANIMAÇÃO MENU FECHAR ABRIR
-ANIMAÇÃO CARDS SKILLS E PORTFOLIO
-portfolio diminuir tamanho pro mobile
-*/
+//load page when it's full loaded
+window.addEventListener('load', function() {
+  document.body.style.visibility = 'visible';
+  document.body.style.opacity = '1';
+});
