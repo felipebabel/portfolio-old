@@ -515,11 +515,11 @@ header .image img {
 }
 
 .linkMenu:not(:first-child) {
-  margin-top: 6rem; /* Adiciona espaçamento superior para todos os itens, exceto o primeiro */
+  margin-top: 5rem; /* Adiciona espaçamento superior para todos os itens, exceto o primeiro */
 }
 
 .linkMenu {
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
   white-space: nowrap; /* Impede que o texto quebre a linha */
 }
 
