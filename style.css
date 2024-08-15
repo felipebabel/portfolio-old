@@ -355,9 +355,11 @@ header .image img {
   flex-direction: column;
   border: 2px solid transparent;
   overflow: hidden;
+  display: flex;
   border-radius: 15px;
   align-items: stretch;
   transition: all 0.3s ease;
+
 }
 
 .portfolio .card:hover {
@@ -614,8 +616,8 @@ header .image img {
   }
 
   .portfolio .card {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .aboutme .card {
@@ -633,7 +635,6 @@ header .image img {
   }
 
   .portfolio {
-    transition: .1s;
     grid-template-columns: repeat(1, 1fr);
   }
 }

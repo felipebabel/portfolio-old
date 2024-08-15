@@ -78,10 +78,71 @@ sr.reveal('.headeraboutme', {delay:200, origin:'left'});
 sr.reveal('.headerskills', {delay:200, origin:'right'});
 sr.reveal('.headerportfolio', {delay:200, origin:'left'});
 sr.reveal('.headerexperiences', {delay:200, origin:'right'});
+const cardsportfolio = document.querySelectorAll('.portfolio .card');
+if (window.matchMedia("(max-width: 600px)").matches) {
+  cardsportfolio.forEach((card, index) => {
+    const row = Math.floor(index / 1); // Assume 1 cards por linha
+    const origin = row % 2 === 0 ? 'left' : 'right'; // Alterna a origem da animação
+
+    sr.reveal(card, {
+      delay: 200, // Delay baseado na posição do card na linha
+      origin: origin,
+      //easing: 'ease-in-out',
+    });
+  });
+} else if (window.matchMedia("(max-width: 900px)").matches) {
+  cardsportfolio.forEach((card, index) => {
+    const row = Math.floor(index / 2); // Assume 2 cards por linha
+    const origin = row % 2 === 0 ? 'left' : 'right'; // Alterna a origem da animação
+
+    sr.reveal(card, {
+      delay: 200, // Delay baseado na posição do card na linha
+      origin: origin,
+      //easing: 'ease-in-out',
+    });
+  });
+} else {
+  cardsportfolio.forEach((card, index) => {
+    const row = Math.floor(index / 3); // Assume 4 cards por linha
+    const origin = row % 2 === 0 ? 'left' : 'right'; // Alterna a origem da animação
+
+    sr.reveal(card, {
+      delay: 200, // Delay baseado na posição do card na linha
+      origin: origin,
+      //easing: 'ease-in-out',
+    });
+  });
+}
+
+const cardsskills = document.querySelectorAll('.skills .card');
+if (window.matchMedia("(max-width: 900px)").matches) {
+  cardsskills.forEach((card, index) => {
+    const row = Math.floor(index / 2); // Assume 4 cards por linha
+    const origin = row % 2 === 0 ? 'left' : 'right'; // Alterna a origem da animação
+
+    sr.reveal(card, {
+      delay: 200, // Delay baseado na posição do card na linha
+      origin: origin,
+      //easing: 'ease-in-out',
+    });
+  });
+} else {
+  cardsskills.forEach((card, index) => {
+    const row = Math.floor(index / 4); // Assume 4 cards por linha
+    const origin = row % 2 === 0 ? 'left' : 'right'; // Alterna a origem da animação
+
+    sr.reveal(card, {
+      delay: 200, // Delay baseado na posição do card na linha
+      origin: origin,
+      //easing: 'ease-in-out',
+    });
+  });
+}
+
+
 sr.reveal('.experiences .card:nth-child(odd)', { // Aplica a animação no primeiro card
   delay: 200,
   origin: 'left', // Animado da direita para o centro
-  easing: 'ease-in-out', // Define uma função de animação
 });
 
 sr.reveal('.experiences .card:nth-child(even)', { // Aplica a animação no segundo card
