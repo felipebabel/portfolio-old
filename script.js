@@ -66,7 +66,6 @@ sr80.reveal('.nav-links-home', {delay:200, origin:'right'});
 sr80.reveal('header .image', {delay: 200, origin: 'bottom'});
 sr80.reveal('.btn-menu', {delay:200, origin:'right'});
 
-
 sr.reveal('.name', {delay:200, origin:'top'});
 sr20.reveal('.personal-projects', {delay:200, origin:'right'});
 sr.reveal('.job', {delay:200, origin:'right'});
@@ -78,6 +77,8 @@ sr.reveal('.headeraboutme', {delay:200, origin:'left'});
 sr.reveal('.headerskills', {delay:200, origin:'right'});
 sr.reveal('.headerportfolio', {delay:200, origin:'left'});
 sr.reveal('.headerexperiences', {delay:200, origin:'right'});
+
+//animation cards portfolio
 const cardsportfolio = document.querySelectorAll('.portfolio .card');
 if (window.matchMedia("(max-width: 600px)").matches) {
   cardsportfolio.forEach((card, index) => {
@@ -114,6 +115,8 @@ if (window.matchMedia("(max-width: 600px)").matches) {
   });
 }
 
+
+//animation cards skills
 const cardsskills = document.querySelectorAll('.skills .card');
 if (window.matchMedia("(max-width: 900px)").matches) {
   cardsskills.forEach((card, index) => {
@@ -139,12 +142,11 @@ if (window.matchMedia("(max-width: 900px)").matches) {
   });
 }
 
-
+//animal cards experiencies
 sr.reveal('.experiences .card:nth-child(odd)', { // Aplica a animação no primeiro card
   delay: 200,
   origin: 'left', // Animado da direita para o centro
 });
-
 sr.reveal('.experiences .card:nth-child(even)', { // Aplica a animação no segundo card
   delay: 200,
   origin: 'right', // Animado da esquerda para o centro
