@@ -32,7 +32,7 @@ body {
   background-color: #18181B;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out; /* Animação de transição */
+  transition: opacity 0.5s ease-in-out; 
 }
 
 nav {
@@ -63,8 +63,6 @@ nav {
   max-width: 100px;
   margin-right: 20px;
 }
-
- /* SLA */
 
 .nav-links {
   list-style: none;
@@ -119,7 +117,6 @@ nav {
   color: rgb(255, 127, 38);
 }
 
-
 .btn:hover {
   background-color: #1e40af;
 }
@@ -136,7 +133,6 @@ nav {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-
 }
 
 .btnShow:hover {
@@ -198,7 +194,6 @@ header .image img {
   font-size: 2.25rem;
   font-weight: 600;
 }
-
 
 .name {
   color: rgb(255, 127, 38);
@@ -285,21 +280,21 @@ header .image img {
  .skills {
   display: grid;
   margin-top: 3rem;
-  grid-template-columns: repeat(4, 1fr); /* 4 colunas no grid */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 2rem;
 }
 
 .skills .card {
   background-color: #27272a;
   display: flex;
-  flex-direction: column; /* Alinhar ícone e texto na vertical */
-  justify-content: center; /* Centralizar verticalmente */
-  align-items: center; /* Centralizar horizontalmente */
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
   border: 2px solid transparent;
   overflow: hidden;
   border-radius: 15px;
   transition: all 0.3s ease;
-  height: 12rem; /* Aumentar a altura para mais espaço */
+  height: 12rem; 
 }
 
 .skills .card:hover {
@@ -314,12 +309,10 @@ header .image img {
 }
 
 .skills i {
-  font-size: 4rem; /* Tamanho ajustável do ícone */
+  font-size: 4rem; 
   color: #fff;
-  margin-bottom: 1rem; /* Espaçamento entre o ícone e o texto */
+  margin-bottom: 1rem; 
 }
-
-
 
  /* PORTFOLIO */
 
@@ -484,24 +477,23 @@ header .image img {
   cursor: pointer;
   background-color:#18181B;
   position: absolute;
-  top: 10px; /* Ajuste conforme necessário */
-  left: 10px; /* Ajuste conforme necessário */
+  top: 10px; 
+  left: 10px; 
 }
 
 #btn-close:hover {
   color: rgb(255, 127, 38);
 }
 
-
 .overlay {
   display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 30%; /* cobre a parte da tela que não é ocupada pelo menu */
+  width: 30%; 
   height: 99999998px;
-  background-color: rgba(0, 0, 0, 0.5); /* define uma cor de fundo preta com 50% de transparência */
-  z-index: 99999998; /* coloca o overlay abaixo do menu */
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 99999998; 
 }
 
 .overlay.show-overlay {
@@ -509,12 +501,12 @@ header .image img {
 }
 
 .linkMenu:not(:first-child) {
-  margin-top: 5rem; /* Adiciona espaçamento superior para todos os itens, exceto o primeiro */
+  margin-top: 5rem; 
 }
 
 .linkMenu {
   margin-bottom: 5rem;
-  white-space: nowrap; /* Impede que o texto quebre a linha */
+  white-space: nowrap; 
 }
 
 .linkMenu a {
@@ -538,7 +530,6 @@ header .image img {
     margin-left: 10%;
     margin-right: 10%;
   }
-
 
 }
 
@@ -607,7 +598,6 @@ header .image img {
     grid-template-columns: 1fr 200px;
   }
 
-
 }
 
 @media (width < 750px) {
@@ -627,14 +617,12 @@ header .image img {
 @media (width < 600px) {
 
   .skills i {
-    font-size: 3rem; /* Tamanho ajustável do ícone */
+    font-size: 3rem; 
   }
 
   .skills h3 {
-    font-size: 1rem; /* Tamanho ajustável do ícone */
+    font-size: 1rem;
   }
-
-
 
   header .image img {
     max-width: 300px;
