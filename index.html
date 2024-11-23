@@ -51,26 +51,21 @@
   <header class="container">
     <div class="content">
       <div class="home">
-        <H1 class="name">Felipe Babel</H1>
-        <H1 class="job">Back-End Software Engineer</H1>
+        <h1 class="name">Felipe Babel</h1>
+        <h1 class="job">Back-End Software Engineer</h1>
         <div class="info-home">
           <p></p>
-        <p>
-          Graduating in Information Systems at FURB
-        </p>
-        <p>
-          With 2 year experience
-        </p>
-        <div class="linkEnglish">
           <p>
-            <a href="https://www.linkedin.com/in/felipebabel/" target="_blank">C1 Advanced English Level</a>
+            Graduating in Information Systems at FURB
           </p>
-        </div>
+          <p>
+            With 2 year experience
+          </p>
         </div>
         <div class="column">
           <div id="empty-space" style="height: 1rem;"></div>
           <div class="socials">
-            <button class="btn" onclick="downloadCV()">Download CV</button>
+            <button class="btn" onclick="toggleLanguageModal()">Download CV</button>
             <a href="https://www.linkedin.com/in/felipebabel/" target="_blank"><i class="ri-linkedin-line"></i></a>
             <a href="https://github.com/felipebabel" target="_blank"><i class="ri-github-line"></i></a>
           </div>
@@ -82,6 +77,14 @@
       <img src="images/profile.png" alt="Felipe Babel">
     </div>
   </header>
+  
+<div class="language-modal" id="languageModal">
+  <h3>Select Language</h3>
+  <button class="btn" onclick="downloadCV('pt')">Portuguese</button>
+  <button class="btn" onclick="downloadCV('en')">English</button>
+</div>
+<div class="language-modal-overlay" id="languageModalOverlay" onclick="toggleLanguageModal()"></div>
+  
 
   <section class="container" id="aboutme">
     <div id="empty-space" style="height: 3rem;"></div>

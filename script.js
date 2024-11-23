@@ -255,16 +255,67 @@ skillsShowLessBtn.addEventListener('click', function () {
   skillsShowLessBtn.style.display = 'none';
 });
 
-function downloadCV() {
-  var fileName = "cv_felipe_babel.pdf";
-  var filePath = "doc/" + fileName;
+function toggleLanguageModal() {
+  var modal = document.getElementById("languageModal");
+  var overlay = document.getElementById("languageModalOverlay");
+
+  // Toggle the modal and overlay visibility
+  modal.classList.toggle("show");
+  overlay.classList.toggle("show");
+
+  // Add or remove the scroll event listener based on modal state
+  if (modal.classList.contains("show")) {
+    window.addEventListener("scroll", closeLanguageModalOnScroll);
+  } else {
+    window.removeEventListener("scroll", closeLanguageModalOnScroll);
+  }
+}
+
+function closeLanguageModalOnScroll() {
+  var modal = document.getElementById("languageModal");
+  var overlay = document.getElementById("languageModalOverlay");
+
+  // Remove the 'show' class to hide the modal and overlay
+  modal.classList.remove("show");
+  overlay.classList.remove("show");
+
+  // Remove the scroll event listener
+  window.removeEventListener("scroll", closeLanguageModalOnScroll);
+}
+
+
+function showLanguageOptions() {
+  document.getElementById("languageModal").style.display = "block";
+}
+
+function closeModal() {
+  var modal = document.getElementById("languageModal");
+  var overlay = document.getElementById("languageModalOverlay");
+
+  modal.classList.remove("show");
+  overlay.classList.remove("show"); // Ensure overlay is hidden
+}
+
+function downloadCV(language) {
+  if (language === "pt") {
+    downloadCVPdf("cv_felipe_babel_pt.pdf", "doc/")
+  } else if (language === "en") {
+    downloadCVPdf("cv_felipe_babel_en.pdf", "doc/")
+  }
+  closeModal();
+}
+
+function downloadCVPdf(fileName, filePath) {
   var link = document.createElement("a");
-  link.href = filePath;
+  link.href = filePath + fileName;
   link.download = fileName;
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
-}
+} 
+
+document.getElementById("languageModalOverlay").addEventListener("click", closeModal);
+
 
 //Copyright year
 const currentYear = new Date().getFullYear();
