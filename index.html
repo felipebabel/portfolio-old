@@ -55,12 +55,8 @@
         <h1 class="job">Back-End Software Engineer</h1>
         <div class="info-home">
           <p></p>
-          <p>
-            Graduating in Information Systems at FURB
-          </p>
-          <p>
-            With 3 year experience
-          </p>
+          <p id="variable_graduating"></p>
+          <p id="variable_experience"></p>
         </div>
         <div class="column">
           <div id="empty-space" style="height: 1rem;"></div>
@@ -94,12 +90,7 @@
       <div class="card">
         <div class="content">
           <div class="text">
-            <p class="justify">
-              I am a technology professional focused in healthcare systems integrations, with a primary focus on HL7
-              FHIR, HL7, and JSON.
-              My experience revolves around the creation and maintenance of both monolithic architectures and
-              microservices to facilitate the
-              exchange of health information between systems.
+            <p id="variable_aboutme" class="justify">
             </p>
           </div>
         </div>
@@ -150,46 +141,18 @@
     </div>
   </section>
 
-  <section class="container" id="portfolio">
-    <div id="empty-space" style="height: 3rem;"></div>
+  <section class="containerTop" id="portfolioTop">
     <h2 class="headerportfolio">PORTFOLIO</h2>
-    <p class="personal-projects">
-      My personal projects at Github.
-    </p>
-    <div class="portfolio">
-      <div class="card">
-        <div class="image">
-          <img src="images/email-microservice.png">  
-        </div>
-        <div class="link-github">
-          <a href="https://github.com/felipebabel/email-microservice" target="_blank"><i class="ri-github-line"></i></a>
-        </div>
+    <p class="personal-projects">My personal projects at Github.</p>
+    <section class="container" id="portfolio">
+      <div class="portfolio" id="portfolio"></div>       <!-- create card using js -->
+      <div id="portfolioShowMoreBtn" style="display: none;">
+        <button id="showMore" class="btnShow">Show More</button>
       </div>
-      <div class="card">
-        <div class="image">
-          <img src="images/redis-cache.png"> 
-        </div>
-        <div class="link-github">
-          <a href="https://github.com/felipebabel/redis-cache" target="_blank"><i
-              class="ri-github-line"></i></a>
-        </div>
+      <div id="portfolioShowLessBtn" style="display: none;">
+        <button id="showLess" class="btnShow">Show Less</button>
       </div>
-      <div class="card">
-        <div class="image">
-          <img src="images/security-spring.png"> 
-        </div>
-        <div class="link-github">
-          <a href="https://github.com/felipebabel/security-spring" target="_blank"><i
-              class="ri-github-line"></i></a>
-        </div>
-      </div>
-    </div>
-    <div id="portfolioShowMoreBtn" style="display: none;">
-      <button id="showMore" class="btnShow">Show More</button>
-    </div>
-    <div id="portfolioShowLessBtn" style="display: none;">
-      <button id="showLess" class="btnShow">Show Less</button>
-    </div>
+    </section>
   </section>
 
   <section class="container" id="experiences">
@@ -204,11 +167,9 @@
               <img src="images/philips.jpg">
             </div>
             <div class="text">
-              <p>Software Engineer - Philips</p>
-              <P>2022 - currently</P>
-              <p class="justify">
-                As an software engineer, I am responsible for maintaining existing monoliths, developing
-                new features, and building microservices from zero.
+              <p id="variable_dev_title"></p>
+              <P id="variable_dev_dt"></P>
+              <p id="variable_dev_ds" class="justify">
               </p>
             </div>
           </div>
@@ -221,12 +182,9 @@
               <img src="images/philips.jpg">
             </div>
             <div class="text">
-              <p>R&D Intern - Philips</p>
-              <P>2021 - 2022</P> 
-              <p class="justify">
-                As an intern, I was responsible for maintaining the existing monoliths and developing new small and
-                mid-sized features. I was also responsible for creating some procedures and queries using PL/SQL.
-              </p>
+              <p id="variable_inter_title"></p>
+              <P id="variable_inter_dt"></P> 
+              <p id="variable_inter_ds" class="justify"></p>
             </div>
           </div>
         </div>
@@ -234,10 +192,9 @@
     </div>
   </section>
 
-  <div class="copyright">
-    Copyright © <span id="year"></span> Felipe Babel. All Rights Reserved.
-  </div>
 
+
+  <div id="copyright" class="copyright"></div>
   <script src="script.js"></script>
 </body>
 
