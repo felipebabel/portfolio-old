@@ -436,60 +436,73 @@ header .image img {
 
  /* MOBILE */
 
-#menu-icon {
-  display: none;
+ #menu-icon {
+  display: block;
   color: #fff;
   cursor: pointer;
   font-size: 2rem;
   background-color: #27272a;
   margin-left: auto;
   margin-right: 5%;
+  background: none;
 }
 
 .nav-links-home-menu {
-  display: none;
-  background-color:#18181B;
+  position: fixed;
   top: 0;
   right: 0;
   width: 70%;
+  height: 100%;
+  background-color: #18181B;
   text-align: center;
-  height: 99999999px;
   list-style: none;
-  position: fixed;
-  z-index: 99999999;
+  z-index: 9999;
+  opacity: 0; 
+  visibility: hidden; 
+  transform: translateX(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
 .nav-links-home-menu.show-menu {
-  display: block;
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
 }
 
 #btn-close {
   color: #fff;
   font-size: 2.5rem;
   cursor: pointer;
-  background-color:#18181B;
   position: absolute;
-  top: 10px; 
-  left: 10px; 
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  transition: color 0.3s ease;
 }
+
 
 #btn-close:hover {
   color: rgb(255, 127, 38);
 }
 
 .overlay {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 30%; 
-  height: 99999998px;
-  background-color: rgba(0, 0, 0, 0.5); 
-  z-index: 99999998; 
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  transition: opacity 0.5s ease, transform 0.5s ease; 
+  opacity: 0;
+  visibility: hidden;
 }
 
 .overlay.show-overlay {
   display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 .linkMenu:not(:first-child) {
