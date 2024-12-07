@@ -513,29 +513,27 @@ header .image img {
 }
 
 /* Language Modal Styles */
-/* Modal styles */
 .language-modal {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.8); /* Initial scale for animation */
+  transform: translate(-50%, -50%) scale(0.8); 
   background-color: #27272a;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   z-index: 2000;
-  opacity: 0; /* Start invisible */
-  visibility: hidden; /* Hides element from screen reader and visually */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth animation */
+  opacity: 0; 
+  visibility: hidden; 
+  transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
 .language-modal.show {
-  opacity: 1; /* Fully visible */
-  visibility: visible; /* Make it visible */
-  transform: translate(-50%, -50%) scale(1); /* Restore size */
+  opacity: 1; 
+  visibility: visible; 
+  transform: translate(-50%, -50%) scale(1); 
 }
 
-/* Modal overlay styles */
 .language-modal-overlay {
   position: fixed;
   top: 0;
@@ -544,17 +542,16 @@ header .image img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1999;
-  opacity: 0; /* Start invisible */
-  visibility: hidden; /* Hides overlay */
-  transition: opacity 0.5s ease; /* Smooth fade-in/out */
+  opacity: 0; 
+  visibility: hidden; 
+  transition: opacity 0.5s ease; 
 }
 
 .language-modal-overlay.show {
-  opacity: 1; /* Fully visible */
-  visibility: visible; /* Make it visible */
+  opacity: 1;
+  visibility: visible; 
 }
 
-/* Title and button styles */
 .language-modal h3 {
   color: #fff;
   margin-bottom: 1rem;
