@@ -182,7 +182,7 @@
   }
 
   .nav-links-home-menu {
-    display: none;
+    display: fixed;
   }
 }
 
