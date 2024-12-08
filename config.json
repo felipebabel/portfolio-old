@@ -3,40 +3,5 @@
         "degree": "Graduating in Information Systems at FURB",
         "experience": "With 3 year experience"
     },
-    "about_me": "I am a technology professional focused in healthcare systems integrations, with a primary focus on HL7 FHIR, HL7, and JSON. My experience revolves around the creation and maintenance of both monolithic architectures and microservices to facilitate the exchange of health information between systems.",
-    "skills":"",
-    "projects": [
-    {
-      "image": "https://github.com/felipebabel/email-microservice/raw/master/assets/portfolio/screenshot.png",
-      "link": "https://github.com/felipebabel/email-microservice"
-    },
-    {
-      "image": "https://github.com/felipebabel/redis-cache/raw/main/assets/portfolio/screenshot.png",
-      "link": "https://github.com/felipebabel/redis-cache"
-    },
-    {
-      "image": "https://github.com/felipebabel/login/raw/main/assets/portfolio/screenshot.png",
-      "link": "https://github.com/felipebabel/login"
-    }
-    ],
-    "INTERN_PHILIPS_DS": "As an intern, I was responsible for maintaining the existing monoliths and developing new small and mid-sized features. I was also responsible for creating some procedures and queries using PL/SQL.",
-    "INTERN_PHILIPS_DT": "2021 - 2022",
-    "INTERN_PHILIPS_TITLE": "R&D Intern - Philips",
-    "DEV_PHILIPS_DS": "As an software engineer, I am responsible for maintaining existing monoliths, developing new features, and building microservices from zero.",
-    "DEV_PHILIPS_DT": "2022 - currently",
-    "DEV_PHILIPS_TITLE": "Software Engineer - Philips",
-    
-  "experiences": [
-    {
-      "title":"R&D Intern - Philips",
-      "description": "As an intern, I was responsible for maintaining the existing monoliths and developing new small and mid-sized features. I was also responsible for creating some procedures and queries using PL/SQL.",
-      "date": "2021 - 2022"
-    },
-    {
-        "title":"Software Engineer - Philips",
-        "description": "As an software engineer, I am responsible for maintaining existing monoliths, developing new features, and building microservices from zero.",
-        "date": "2022 - currently"
-      }
-  ]
+    "about_me": "I am a technology professional focused in healthcare systems integrations, with a primary focus on HL7 FHIR, HL7, and JSON. My experience revolves around the creation and maintenance of both monolithic architectures and microservices to facilitate the exchange of health information between systems."
 }
-  

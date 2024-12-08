@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #18181B;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; 
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  padding: 0 8%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #27272a;
+  z-index: 1000
+}
+ /* IMAGES */
+.nav-logo {
+  max-width: 100px;
+}
+
+
+
+.nav-logo-home {
+  max-width: 100px;
+  cursor: pointer;
+}
+
+.nav-logo-philips {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-links-home {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: #fff;
+}
+
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255, 127, 38);
+  transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+  width: 100%;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #1d4ed8;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1e40af;
+}
+
+.btnShow {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #1d4ed8;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btnShow:hover {
+  background-color: #1e40af;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.ri-menu-line {
+  display: none;
+}
+
+.headeraboutme, .headerskills, .headerportfolio,.headerexperiences {
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.name {
+  color: rgb(255, 127, 38);
+}
+
+ .flex-container {
+  display: flex;
+}
+
+.nav-logo-philips {
+  flex: 0 0 auto;
+  margin-right: 50px;
+}
+
+.nav-logo-philips img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text {
+  flex: 1;
+}
+
+.personal-projects {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  color: #ccc;
+}
+
+.card i {
+  margin-top: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+ /* COPYRIGHT */
+
+.copyright {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  padding-bottom: 30px;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.home {
+  padding-top: 100px;
+}
+

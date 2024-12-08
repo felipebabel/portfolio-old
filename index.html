@@ -4,11 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  
+    <!-- css file -->
+  <link rel="stylesheet" href="css/aboutme.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/btn_cv.css">
+  <link rel="stylesheet" href="css/experience.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/skills.css">
+
   <script src="https://unpkg.com/scrollreveal"></script>
   <title>Personal Portfolio Felipe Babel</title>
   <link href="images/logo-icon.png" rel="icon">
@@ -34,6 +45,7 @@
       <i class="bx bx-menu"></i>
     </button>
     
+        <!-- mobile -->
     <div class="overlay"></div>
       <ul class="nav-links-home-menu">
         <button id="btn-close">
@@ -48,6 +60,7 @@
     </div>
   </nav>
 
+      <!-- home -->
   <header class="container">
     <div class="content">
       <div class="home">
@@ -74,6 +87,7 @@
     </div>
   </header>
   
+      <!-- btn cv -->
 <div class="language-modal" id="languageModal">
   <h3>Select Language</h3>
   <button class="btn" onclick="downloadCV('pt')">Portuguese</button>
@@ -81,7 +95,7 @@
 </div>
 <div class="language-modal-overlay" id="languageModalOverlay" onclick="toggleLanguageModal()"></div>
   
-
+    <!-- about me -->
   <section class="container" id="aboutme">
     <div id="empty-space" style="height: 3rem;"></div>
     <h2 class="headeraboutme">ABOUT ME</h2>
@@ -100,6 +114,7 @@
     </div>
   </section>
 
+      <!-- skills -->
   <section class="container" id="skills">
     <div id="empty-space" style="height: 3rem;"></div>
     <h2 class="headerskills">SKILLS</h2>
@@ -141,20 +156,50 @@
     </div>
   </section>
 
-  <section class="containerTop" id="portfolioTop">
+      <!-- portfolio -->
+  <section class="container" id="portfolio">
+    <div id="empty-space" style="height: 3rem;"></div>
     <h2 class="headerportfolio">PORTFOLIO</h2>
-    <p class="personal-projects">My personal projects at Github.</p>
-    <section class="container" id="portfolio">
-      <div class="portfolio" id="portfolio"></div>       <!-- create card using js -->
-      <div id="portfolioShowMoreBtn" style="display: none;">
-        <button id="showMore" class="btnShow">Show More</button>
+    <p class="personal-projects">
+      My personal projects at Github.
+    </p>
+    <div class="portfolio">
+      <div class="card">
+        <div class="image">
+          <img src="https://raw.githubusercontent.com/felipebabel/email-microservice/master/assets/portfolio/screenshot.png">  
+        </div>
+        <div class="link-github">
+          <a href="https://github.com/felipebabel/email-microservice" target="_blank"><i class="ri-github-line"></i></a>
+        </div>
       </div>
-      <div id="portfolioShowLessBtn" style="display: none;">
-        <button id="showLess" class="btnShow">Show Less</button>
+      <div class="card">
+        <div class="image">
+          <img src="https://raw.githubusercontent.com/felipebabel/redis-cache/main/assets/portfolio/screenshot.png"> 
+        </div>
+        <div class="link-github">
+          <a href="https://github.com/felipebabel/redis-cache" target="_blank"><i
+              class="ri-github-line"></i></a>
+        </div>
       </div>
-    </section>
+      <div class="card">
+        <div class="image">
+          <img src="https://raw.githubusercontent.com/felipebabel/login/main/assets/portfolio/screenshot.png"> 
+        </div>
+        <div class="link-github">
+          <a href="https://github.com/felipebabel/security-spring" target="_blank"><i
+              class="ri-github-line"></i></a>
+        </div>
+      </div>
+    </div>
+    <div id="portfolioShowMoreBtn" style="display: none;">
+      <button id="showMore" class="btnShow">Show More</button>
+    </div>
+    <div id="portfolioShowLessBtn" style="display: none;">
+      <button id="showLess" class="btnShow">Show Less</button>
+    </div>
   </section>
 
+      <!-- experiences -->
   <section class="container" id="experiences">
     <div id="empty-space" style="height: 3rem;"></div>
     <h2 class="headerexperiences">EXPERIENCES</h2>
@@ -167,9 +212,11 @@
               <img src="images/philips.jpg">
             </div>
             <div class="text">
-              <p id="variable_dev_title"></p>
-              <P id="variable_dev_dt"></P>
-              <p id="variable_dev_ds" class="justify">
+              <p>Software Engineer - Philips</p>
+              <P>2022 - currently</P>
+              <p class="justify">
+                As an software engineer, I am responsible for maintaining existing monoliths, developing
+                new features, and building microservices from zero.
               </p>
             </div>
           </div>
@@ -182,9 +229,12 @@
               <img src="images/philips.jpg">
             </div>
             <div class="text">
-              <p id="variable_inter_title"></p>
-              <P id="variable_inter_dt"></P> 
-              <p id="variable_inter_ds" class="justify"></p>
+              <p>R&D Intern - Philips</p>
+              <P>2021 - 2022</P> 
+              <p class="justify">
+                As an intern, I was responsible for maintaining the existing monoliths and developing new small and
+                mid-sized features. I was also responsible for creating some procedures and queries using PL/SQL.
+              </p>
             </div>
           </div>
         </div>
@@ -192,11 +242,10 @@
     </div>
   </section>
 
-
-
+      <!-- copyright-->
   <div id="copyright" class="copyright"></div>
   <script src="js/script.js"></script>
-  <script src="js/portfolio.js"></script>
+
 </body>
 
 </html>

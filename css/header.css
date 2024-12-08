@@ -1,0 +1,82 @@
+header {
+  position: relative;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+header .content h4 {
+  margin-bottom: 1rem;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+header .content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+}
+
+header .content p {
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+header .image {
+  position: relative;
+  align-items: center;
+}
+
+header .image img {
+  max-width: 600px;
+  margin: auto;
+}
+
+.link-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.link-github a {
+  color: #fff;
+  background-color: #1d4ed8;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+}
+
+.link-github a:hover {
+  background-color: #1e40af;
+  transition: all 0.3s ease;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.socials a {
+  color: #fff;
+  background-color: #1d4ed8;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  background-color: #1e40af;
+  transition: all 0.3s ease;
+}
+
+.job {
+  color: #fff;
+}

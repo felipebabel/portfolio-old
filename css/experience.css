@@ -1,0 +1,34 @@
+.experiences {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.experiences .card {
+  padding: 2rem 2rem 2rem;
+  background-color: #27272a;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+.experiences .card:hover {
+  background-color: #323232;
+  border-color: rgb(255, 127, 38);
+}
+
+.experiences .card p {
+  color: #fff;
+  margin-bottom: 0.75rem;
+  text-align: justify;
+}
+
+.justify {
+  text-align: justify;
+}

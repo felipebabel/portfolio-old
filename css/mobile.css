@@ -1,0 +1,211 @@
+#menu-icon {
+  display: block;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
+  background-color: #27272a;
+  margin-left: auto;
+  margin-right: 5%;
+  background: none;
+}
+
+.nav-links-home-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background-color: #18181B;
+  text-align: center;
+  list-style: none;
+  z-index: 9999;
+  opacity: 0; 
+  visibility: hidden; 
+  transform: translateX(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+.nav-links-home-menu.show-menu {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+#btn-close {
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  transition: color 0.3s ease;
+}
+
+
+#btn-close:hover {
+  color: rgb(255, 127, 38);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  transition: opacity 0.5s ease, transform 0.5s ease; 
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay.show-overlay {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.linkMenu:not(:first-child) {
+  margin-top: 5rem; 
+}
+
+.linkMenu {
+  margin-bottom: 5rem;
+  white-space: nowrap; 
+}
+
+.linkMenu a {
+  color: #fff;
+  text-align: left;
+}
+
+.linkMenu a:hover {
+  color: rgb(255, 127, 38);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+@media (width < 1280px) {
+
+  .skills .card {
+    max-width: 100%;
+  }
+
+
+}
+
+@media (width < 1200px) {
+  nav {
+    padding: 0 2.5%;
+    transition: .1s;
+  }
+
+  header .image img {
+    max-width: 500px;
+    padding-top: 60px;
+  }
+
+  header .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .home {
+    text-align: center;
+    padding-top: 0px;
+  }
+
+  .socials {
+    align-items: center;
+    justify-content: center;
+  }
+
+  header {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+@media (width < 900px) {
+  header {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  header .image img {
+    max-width: 400px;
+  }
+
+  .link {
+    position: relative;
+    padding-bottom: 0.75rem;
+  }
+
+  .skills .card:nth-child(2n+1) {
+    margin-left: 10%;
+  }
+
+  .skills .card:nth-child(2n) {
+    margin-right: 10%;
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer {
+    grid-template-columns: 1fr 200px;
+  }
+
+}
+
+@media (width < 750px) {
+  .link {
+    display: none;
+  }
+
+  #menu-icon{
+    display: block;
+  }
+
+  .nav-links-home-menu {
+    display: none;
+  }
+}
+
+@media (width < 600px) {
+
+  .skills i {
+    font-size: 3rem; 
+  }
+
+  .skills h3 {
+    font-size: 1rem;
+  }
+
+  header .image img {
+    max-width: 300px;
+  }
+
+  .portfolio .card { 
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .aboutme .card {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .experiences .card {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .nav-logo-philips {
+    display: none;
+  }
+  .portfolio {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

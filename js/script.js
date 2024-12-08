@@ -330,26 +330,14 @@ fetch('config.json')
         const experience = document.getElementById('variable_experience');
         const graduating = document.getElementById('variable_graduating');
         const aboutme = document.getElementById('variable_aboutme');
-        const inter_title = document.getElementById('variable_inter_title');
-        const inter_dt = document.getElementById('variable_inter_dt');
-        const inter_ds = document.getElementById('variable_inter_ds');
-        const dev_title = document.getElementById('variable_dev_title');
-        const dev_dt = document.getElementById('variable_dev_dt');
-        const dev_ds = document.getElementById('variable_dev_ds');
         const copyright = document.getElementById('copyright');
         copyright.innerHTML = `Copyright © ` + currentYear + ` Felipe Babel. All Rights Reserved.`;
         experience.innerHTML = `${data.home.experience}`;
-        dev_title.innerHTML = `${data.DEV_PHILIPS_TITLE}`;
-        dev_dt.innerHTML = `${data.DEV_PHILIPS_DT}`;
-        dev_ds.innerHTML = `${data.DEV_PHILIPS_DS}`;
-        inter_title.innerHTML = `${data.INTERN_PHILIPS_TITLE}`;
-        inter_dt.innerHTML = `${data.INTERN_PHILIPS_DT}`;
-        inter_ds.innerHTML = `${data.INTERN_PHILIPS_DS}`;
         graduating.innerHTML = `${data.home.degree}`;
         aboutme.innerHTML = `${data.about_me}`;
 
         portfolio(data);
-
+        renderExperiences(data);
       
   })
 
