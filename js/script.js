@@ -269,11 +269,12 @@ skillsShowLessBtn.addEventListener('click', function () {
 
 function toggleLanguageModal() {
   var modal = document.getElementById("languageModal");
-  var overlay = document.getElementById("languageModalOverlay");
+  var overlay = document.querySelector('.language-modal-overlay');;
 
   // Toggle the modal and overlay visibility
   modal.classList.toggle("show");
   overlay.classList.toggle("show");
+  overlay.classList.remove("hide-overlay");
 
   // Add or remove the scroll event listener based on modal state
   if (modal.classList.contains("show")) {
@@ -285,10 +286,11 @@ function toggleLanguageModal() {
 
 function closeLanguageModalOnScroll() {
   var modal = document.getElementById("languageModal");
-  var overlay = document.getElementById("languageModalOverlay");
+  var overlay = document.querySelector('.language-modal-overlay');;
 
   // Remove the 'show' class to hide the modal and overlay
   modal.classList.remove("show");
+  overlay.classList.add("hide-overlay");
   overlay.classList.remove("show");
 
   // Remove the scroll event listener
@@ -302,9 +304,10 @@ function showLanguageOptions() {
 
 function closeModal() {
   var modal = document.getElementById("languageModal");
-  var overlay = document.getElementById("languageModalOverlay");
+  var overlay = document.querySelector('.language-modal-overlay');;
 
   modal.classList.remove("show");
+  overlay.classList.add("hide-overlay");
   overlay.classList.remove("show"); // Ensure overlay is hidden
 }
 

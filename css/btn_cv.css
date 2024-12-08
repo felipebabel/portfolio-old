@@ -29,12 +29,18 @@
   z-index: 1999;
   opacity: 0; 
   visibility: hidden; 
-  transition: opacity 0.5s ease; 
+  transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
 .language-modal-overlay.show {
   opacity: 1;
   visibility: visible; 
+}
+
+.language-modal-overlay.hide-overlay {
+  opacity: 0;
+  visibility: hidden; /* Will apply after the animation ends */
+  transition: opacity 0.5s ease, visibility 0.5s ease 0.5s;
 }
 
 .language-modal h3 {
