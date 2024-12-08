@@ -17,6 +17,7 @@
   height: 100%;
   background-color: #18181B;
   text-align: center;
+  align-items: center;
   list-style: none;
   z-index: 9999;
   opacity: 0; 
