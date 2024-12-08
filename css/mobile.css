@@ -1,5 +1,5 @@
 #menu-icon {
-  display: block;
+  display: none;
   color: #fff;
   cursor: pointer;
   font-size: 2rem;
@@ -177,6 +177,10 @@
     display: none;
   }
 
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   #menu-icon{
     display: block;
   }
@@ -220,5 +224,10 @@
   }
   .portfolio {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  #menu-icon {
+    display: block;
+    
   }
 }
