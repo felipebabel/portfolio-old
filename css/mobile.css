@@ -17,6 +17,9 @@
   height: 100%;
   background-color: #18181B;
   text-align: center;
+  -webkit-justify-content: center; /* Safari compatibility */
+  justify-content: center;
+  -webkit-align-items: center; /* Safari compatibility */
   align-items: center;
   list-style: none;
   z-index: 9999;
