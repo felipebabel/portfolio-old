@@ -166,8 +166,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function closeMenu() {
       navMenu.classList.remove('show-menu');
+      navMenu.classList.add('hide-menu');
       overlay.classList.remove('show-overlay');
+      overlay.classList.add('hide-overlay');
   }
+
+  function openMenu() {
+    navMenu.classList.remove('hide-menu'); // Clean up the closing class
+    navMenu.classList.add('show-menu');
+    overlay.classList.remove('hide-overlay'); // Clean up the closing class
+    overlay.classList.add('show-overlay');
+}
 
   btnClose.addEventListener('click', function() {
       closeMenu();
@@ -180,8 +189,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   open.addEventListener('click', function() {
-      navMenu.classList.toggle('show-menu');
-      overlay.classList.toggle('show-overlay');
+    if (navMenu.classList.contains('show-menu')) {
+      closeMenu();
+  } else {
+      openMenu();
+  }
   });
 
   overlay.addEventListener('click', function() {
