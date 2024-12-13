@@ -29,6 +29,17 @@
   text-align: justify;
 }
 
+.experiences .card li {
+  color: #fff;
+  margin-bottom: 0.75rem;
+  text-align: justify;
+}
+
+ul {
+  list-style-type: disc; /* Tipo de marcador (disc, circle, square) */
+  margin-left: 3rem; /* Ajusta o recuo da lista */
+}
+
 .justify {
   text-align: justify;
 }
