@@ -353,12 +353,9 @@ fetch('config.json')
         graduating.innerHTML = `${data.home.degree}`;
         aboutme.innerHTML = `${data.about_me}`;
 
-        portfolio(data);
         renderExperiences(data);
       
   })
-
-        
 
       .catch(error => {
         console.error('Error loading JSON:', error);
