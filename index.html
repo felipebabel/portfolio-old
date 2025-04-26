@@ -22,7 +22,7 @@
 
   <script src="https://unpkg.com/scrollreveal"></script>
   <title>Personal Portfolio Felipe Babel</title>
-  <link href="images/logo-icon.png" rel="icon">
+  <link href="assets/images/logo-icon.png" rel="icon">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
   <nav>
     <div class="nav-logo-home">
       <a href="#top">
-      <img src="images/logo_bold.jpg">
+      <img src="assets/images/logo_bold.jpg">
     </a>
     </div>
 
@@ -70,6 +70,7 @@
           <p></p>
           <p id="variable_graduating"></p>
           <p id="variable_experience"></p>
+          <p id="variable_english"></p>
         </div>
         <div class="column">
           <div id="empty-space" style="height: 1rem;"></div>
@@ -83,7 +84,7 @@
       </div>
     </div>
     <div class="image" id="imageprofile">
-      <img src="images/profile.png" alt="Felipe Babel">
+      <img src="assets/images/profile.png" alt="Felipe Babel">
     </div>
   </header>
   
@@ -166,7 +167,10 @@
     <div class="portfolio">
       <div class="card">
         <div class="image">
-          <img src="https://raw.githubusercontent.com/felipebabel/email-microservice/master/assets/portfolio/screenshot.png">  
+          <img src="assets/gif/projects/gif.gif" loading="lazy">  
+          <div class="description">
+            <p>Sends emails with or without random PDF attachments using AWS SES. Built with Java 21, Spring Boot, Docker.</p>
+          </div>
         </div>
         <div class="link-github">
           <a href="https://github.com/felipebabel/email-microservice" target="_blank"><i class="ri-github-line"></i></a>
@@ -175,6 +179,9 @@
       <div class="card">
         <div class="image">
           <img src="https://raw.githubusercontent.com/felipebabel/redis-cache/main/assets/portfolio/screenshot.png"> 
+          <div class="description">
+            <p>The purpose of this project is to test caching using Redis.</p>
+          </div>
         </div>
         <div class="link-github">
           <a href="https://github.com/felipebabel/redis-cache" target="_blank"><i
@@ -183,7 +190,34 @@
       </div>
       <div class="card">
         <div class="image">
+          <img src="https://raw.githubusercontent.com/felipebabel/redis-cache/main/assets/portfolio/screenshot.png"> 
+          <div class="description">
+            <p>A simple WebSocket server implemented in Java. This server handles multiple client connections, receives messages, and responds to them.</p>
+          </div>
+        </div>
+        <div class="link-github">
+          <a href="https://github.com/felipebabel/socket" target="_blank"><i
+              class="ri-github-line"></i></a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="https://raw.githubusercontent.com/felipebabel/redis-cache/main/assets/portfolio/screenshot.png"> 
+          <div class="description">
+            <p>Java microservice (Docker-ready) that generates random PDFs and sends them via email on a custom schedule. Uses PostgreSQL, ShedLock, and supports multiple instances without duplicates.</p>
+          </div>
+        </div>
+        <div class="link-github">
+          <a href="https://github.com/felipebabel/scheduler" target="_blank"><i
+              class="ri-github-line"></i></a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
           <img src="https://raw.githubusercontent.com/felipebabel/login-backend/main/assets/portfolio/screenshot.png"> 
+          <div class="description">
+            <p>This project is designed to user registration and login functionalities, utilizing AES encryption to securely store passwords, along with token-based authentication for secure access (In Development).</p>
+          </div>
         </div>
         <div class="link-github">
           <a href="https://github.com/felipebabel/security-spring" target="_blank"><i
@@ -193,6 +227,9 @@
       <div class="card">
         <div class="image">
           <img src="https://raw.githubusercontent.com/felipebabel/login/main/assets/portfolio/screenshot.png"> 
+          <div class="description">
+            <p>This project provides a user-friendly interface for creating accounts, logging in, and managing authentication workflows, ensuring secure interactions with the backend (In Development).</p>
+          </div>
         </div>
         <div class="link-github">
           <a href="https://github.com/felipebabel/login" target="_blank"><i
@@ -218,7 +255,7 @@
         <div class="content">
           <div class="flex-container">
             <div class="nav-logo-philips">
-              <img src="images/philips.jpg">
+              <img src="assets/images/philips.jpg">
             </div>
             <div class="text">
               <p>Software Engineer - Philips</p>
@@ -241,7 +278,7 @@
         <div class="content">
           <div class="flex-container">
             <div class="nav-logo-philips">
-              <img src="images/philips.jpg">
+              <img src="assets/images/philips.jpg">
             </div>
             <div class="text">
               <p>R&D Intern - Philips</p>

@@ -1,0 +1,57 @@
+name: Portfolio Validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-and-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # HTML Lint
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
+
+      - name: Run HTMLHint
+        run: htmlhint "**/*.html"
+
+      # CSS Lint
+      - name: Install Stylelint and Config
+        run: |
+          npm install -g stylelint stylelint-config-standard
+          echo '{ "extends": "stylelint-config-standard" }' > .stylelintrc.json
+
+      - name: Run Stylelint
+        run: stylelint "**/*.css"
+
+      # JS Lint
+      - name: Install ESLint and Init
+        run: |
+          npm install -g eslint
+          eslint --init
+
+      - name: Run ESLint
+        run: eslint "**/*.js"
+
+      # Check Broken Links
+      - name: Check Broken Links
+        uses: lycheeverse/lychee-action@v1.10.0
+        with:
+          args: --verbose ./  # Scans everything in the repository
+
+      # Check Image Sizes (without failing the workflow)
+      - name: Check Image Sizes
+        run: |
+          oversized=$(find assets -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) -size +1M)
+          if [ -n "$oversized" ]; then
+            echo "⚠️ Warning: The following images are larger than 1MB:"
+            echo "$oversized"
+          else
+            echo "✅ No images larger than 1MB found."
+          fi

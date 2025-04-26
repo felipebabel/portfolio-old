@@ -80,3 +80,11 @@ header .image img {
 .job {
   color: #fff;
 }
+
+.info-home a {
+  color: #fff;
+}
+
+.info-home a:hover {
+  color: rgb(255, 127, 38);
+}
