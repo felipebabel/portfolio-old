@@ -351,10 +351,7 @@ fetch('config.json')
         experience.innerHTML = `${data.home.experience}`;
         english.innerHTML = `<a href="${data.home.certifieds[0].url}" target="_blank" rel="noopener noreferrer">${data.home.certifieds[0].descriptions}</a>`;
         graduating.innerHTML = `${data.home.degree}`;
-        aboutme.innerHTML = `${data.about_me}`;
-
-        renderExperiences(data);
-      
+        aboutme.innerHTML = `${data.about_me}`;      
   })
 
       .catch(error => {
