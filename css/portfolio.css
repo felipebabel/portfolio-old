@@ -41,23 +41,25 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9); 
+  background: rgba(0, 0, 0, 0.9);
   color: white;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0rem 4rem;
-  line-height: 2;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
   transition: bottom 0.4s ease, opacity 0.4s ease;
-  font-size: 0.9rem;
-  opacity: 0; 
 }
 
-.portfolio .image:hover .description {
+.description.active {
   bottom: 19%;
   opacity: 1;
+  pointer-events: auto;
 }
+
+
 
 .link-github {
   height: 20%; 

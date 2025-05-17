@@ -176,6 +176,13 @@
 
 }
 
+@media (width > 750px) {
+  .portfolio .image:hover .description {
+    bottom: 19%;
+    opacity: 1;
+  }
+}
+
 @media (width < 750px) {
   .link {
     display: none;

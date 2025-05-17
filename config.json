@@ -1,13 +1,10 @@
 {
     "home": {
-        "degree": "Graduating in Information Systems at FURB",
-        "experience": "With 3 year experience",
         "certifieds" : [
             {
                 "descriptions": "C1 English (TOEIC Certified)",
                 "url": "https://www.linkedin.com/in/felipebabel/"
             }
         ]
-    },
-    "about_me": "I am a technology professional focused in healthcare systems integrations, with a primary focus on HL7 FHIR, HL7, and JSON. My experience revolves around the creation and maintenance of both monolithic architectures and microservices to facilitate the exchange of health information between systems."
+    }
 }

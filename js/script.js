@@ -2,6 +2,8 @@ function openMenu() {
   const nav = document.querySelector('nav');
   nav.classList.toggle('open');  
 }
+const sr = ScrollReveal ({distance :'40px', duration: 2500, reset: true});
+
 
 //_________________________________PORTFOLIO__________________________________
 
@@ -23,20 +25,24 @@ if (portfolioCards.length > initialVisiblePortfolioCards) {
 }
 
 // Mostra mais cards do portfólio quando o botão 'Show More' é clicado
-portfolioShowMoreBtn.addEventListener('click', function () {
-  for (let i = visiblePortfolioCards; i < visiblePortfolioCards + 3; i++) {
-    if (portfolioCards[i]) {
-      portfolioCards[i].style.display = 'block';
-    }
-  }
-  visiblePortfolioCards += 3;
+portfolioShowMoreBtn.addEventListener('click', () => {
+  const maxIndex = Math.min(visiblePortfolioCards + 3, portfolioCards.length);
+  for (let i = visiblePortfolioCards; i < maxIndex; i++) {
+    portfolioCards[i].style.display = 'block';
+    portfolioCards[i].style.opacity = '1';
+    portfolioCards[i].style.transform = 'none';
 
-  // Se o número de cards visíveis for igual ou maior que o total, mostra o botão 'Show Less'
+  }
+  visiblePortfolioCards = maxIndex;
+
   if (visiblePortfolioCards >= portfolioCards.length) {
     portfolioShowLessBtn.style.display = 'block';
     portfolioShowMoreBtn.style.display = 'none';
   }
 });
+
+
+
 
 // Esconde cards extras do portfólio quando o botão 'Show Less' é clicado
 portfolioShowLessBtn.addEventListener('click', function () {
@@ -57,7 +63,6 @@ window.onload = function() {
 }
 //_________________________________ANIMATION__________________________________
 
-const sr = ScrollReveal ({distance :'40px', duration: 2500, reset: true});
 const sr20 = ScrollReveal ({distance :'10px', duration: 1500, reset: true});
 const sr80 = ScrollReveal ({distance :'80px', duration: 2500, reset: false});
 
@@ -337,21 +342,31 @@ window.addEventListener('load', function() {
   document.body.style.opacity = '1';
 });
 
+document.querySelectorAll('.portfolio .card .image').forEach(image => {
+  image.addEventListener('click', () => {
+    const desc = image.querySelector('.description');
+    const isActive = desc.classList.contains('active');
+
+    document.querySelectorAll('.portfolio .description.active').forEach(openDesc => {
+      openDesc.classList.remove('active');
+    });
+
+    if (!isActive) {
+      desc.classList.add('active');
+    }
+  });
+});
+
+
 fetch('config.json')
       .then(response => response.json())
       .then(data => {
         const currentYear = new Date().getFullYear();
 
-        const experience = document.getElementById('variable_experience');
         const english = document.getElementById('variable_english');
-        const graduating = document.getElementById('variable_graduating');
-        const aboutme = document.getElementById('variable_aboutme');
         const copyright = document.getElementById('copyright');
         copyright.innerHTML = `Copyright © ` + currentYear + ` Felipe Babel. All Rights Reserved.`;
-        experience.innerHTML = `${data.home.experience}`;
-        english.innerHTML = `<a href="${data.home.certifieds[0].url}" target="_blank" rel="noopener noreferrer">${data.home.certifieds[0].descriptions}</a>`;
-        graduating.innerHTML = `${data.home.degree}`;
-        aboutme.innerHTML = `${data.about_me}`;      
+        english.innerHTML = `<a href="${data.home.certifieds[0].url}" target="_blank" rel="noopener noreferrer">${data.home.certifieds[0].descriptions}</a>`;    
   })
 
       .catch(error => {
