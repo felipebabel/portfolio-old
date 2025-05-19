@@ -35,6 +35,13 @@
   object-fit: cover;
 }
 
+.portfolio .description p {
+  color: white;
+  padding: 3rem;
+  text-align: center;
+  padding-top: 5rem;
+}
+
 .description {
   position: absolute;
   bottom: 100%;
